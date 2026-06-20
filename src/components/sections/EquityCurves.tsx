@@ -7,7 +7,7 @@ export function EquityCurves() {
       <div className="container">
         <SectionHead
           eyebrow="Hypothetical equity"
-          title="One curve per system."
+          title="Fifteen months, three curves."
           intro="Modeled growth across the 15-month validation window for each tier. Hypothetical and educational — results are not typical and not a live account."
           className="reveal"
         />

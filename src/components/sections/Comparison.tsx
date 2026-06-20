@@ -7,8 +7,8 @@ export function Comparison({ cream = true }: { cream?: boolean }) {
       <div className="container">
         <SectionHead
           eyebrow="Why we're different"
-          title="Better than the rest."
-          intro="Most retail algorithms are one trick, over-fit, and quietly martingale their way to a blow-up. Meridian was built the opposite way."
+          title="Most retail algos blow up the same way."
+          intro="One trick, over-fit, quietly martingaling toward a single bad day. Meridian was built the opposite way — diversified, stress-tested, and honest about risk."
           className="reveal"
         />
         <div className="cmp reveal" style={{ marginTop: "clamp(2rem,4vw,3rem)" }} data-reveal>

@@ -17,8 +17,8 @@ function fmt(n: number) {
 
 export function Calculator() {
   const [mode, setMode] = useState<Mode>("hybrid");
-  const [amount, setAmount] = useState(120000);
-  const [accounts, setAccounts] = useState(6);
+  const [amount, setAmount] = useState(50000);
+  const [accounts, setAccounts] = useState(3);
 
   const series = useMemo(() => {
     const cash = (m: number) => amount * (Math.pow(1 + CASH_MONTHLY, m) - 1);
@@ -79,8 +79,9 @@ export function Calculator() {
 
       <div className="calc__out reveal">
         <div>
-          <p className="eyebrow"><span className="dot" /> Projected net · 36 months</p>
+          <p className="eyebrow"><span className="dot" /> Illustrative range · 36 months</p>
           <div className="calc__big">{fmt(headline)}</div>
+          <p className="calc__caveat mono">Illustrative only — not a forecast, guarantee, or advice.</p>
         </div>
 
         <div className="calc__bars">

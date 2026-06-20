@@ -50,11 +50,11 @@ export const FOOTER_COLS: { title: string; links: NavLink[] }[] = [
   {
     title: "Get started",
     links: [
+      { label: "Start here", href: "/start" },
       { label: "Apply for access", href: "/apply" },
       { label: "Book a demo", href: "/apply" },
       { label: "Pricing", href: "/pricing" },
       { label: "Client login", href: "/login" },
-      { label: "FAQ", href: "/faq" },
     ],
   },
   {

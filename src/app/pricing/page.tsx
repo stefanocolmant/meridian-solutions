@@ -51,7 +51,7 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="muted mono" style={{ textAlign: "center", marginTop: "2rem", fontSize: "0.78rem" }}>
-            Prop-firm evaluation fees are paid to your chosen firm, separately. Cancel anytime.
+            Prop-firm evaluation fees and profit splits are set by your chosen firm, separately — Meridian only charges the flat software licence. Cancel anytime.
           </p>
         </div>
       </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
@@ -9,25 +9,47 @@ import { NAV, NAV_CTA, NAV_LOGIN, BRAND } from "@/content/site";
 export function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const burgerRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   // close on route change
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // lock scroll + lenis while drawer open
+  // lock scroll + lenis while drawer open, + a11y (Escape, focus management)
   useEffect(() => {
     const lenis = (window as unknown as { lenis?: { stop: () => void; start: () => void } }).lenis;
     if (open) {
       document.documentElement.style.overflow = "hidden";
       lenis?.stop();
+      // move focus into the drawer
+      const first = drawerRef.current?.querySelector<HTMLElement>("a, button");
+      first?.focus();
+      const onKey = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setOpen(false);
+        if (e.key === "Tab" && drawerRef.current) {
+          const items = Array.from(drawerRef.current.querySelectorAll<HTMLElement>("a, button"));
+          if (!items.length) return;
+          const f = items[0];
+          const l = items[items.length - 1];
+          if (e.shiftKey && document.activeElement === f) { e.preventDefault(); l.focus(); }
+          else if (!e.shiftKey && document.activeElement === l) { e.preventDefault(); f.focus(); }
+        }
+      };
+      document.addEventListener("keydown", onKey);
+      return () => document.removeEventListener("keydown", onKey);
     } else {
       document.documentElement.style.overflow = "";
       lenis?.start();
     }
-    return () => {
-      document.documentElement.style.overflow = "";
-    };
+  }, [open]);
+
+  // restore focus to the burger when the drawer closes
+  const closedOnce = useRef(false);
+  useEffect(() => {
+    if (!open && closedOnce.current) burgerRef.current?.focus();
+    if (open) closedOnce.current = true;
   }, [open]);
 
   return (
@@ -59,6 +81,7 @@ export function Nav() {
         </div>
 
         <button
+          ref={burgerRef}
           className={`mer-burger ${open ? "is-open" : ""}`}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
@@ -70,7 +93,7 @@ export function Nav() {
       </div>
 
       {/* mobile drawer */}
-      <div className={`mer-drawer ${open ? "is-open" : ""}`} aria-hidden={!open}>
+      <div ref={drawerRef} className={`mer-drawer ${open ? "is-open" : ""}`} aria-hidden={!open}>
         <nav className="mer-drawer__links">
           {NAV.map((l, i) => (
             <Link

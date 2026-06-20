@@ -3,6 +3,9 @@ import { SectionHead } from "@/components/ui";
 
 export function Testimonials({ cream = true }: { cream?: boolean }) {
   const [lead, ...rest] = TESTIMONIALS;
+  const rowA = rest;
+  const rowB = [...rest].reverse();
+
   return (
     <section className={`section ${cream ? "is-cream" : ""}`}>
       <div className="container">
@@ -19,15 +22,25 @@ export function Testimonials({ cream = true }: { cream?: boolean }) {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="grid-2" style={{ marginTop: "clamp(1.5rem,3vw,2.5rem)" }} data-reveal="0.1">
-          {rest.slice(0, 4).map((t) => (
-            <figure className="tcard reveal" key={t.name + t.role} style={{ margin: 0 }}>
+      {/* moving testimonial rows */}
+      <div className="tmarquee marquee" style={{ marginTop: "clamp(2rem,4vw,3rem)" }} data-marquee data-marquee-speed="36">
+        <div className="marquee_track">
+          {[...rowA, ...rowA].map((t, i) => (
+            <figure className="marquee_item tcard tcard--mq" key={`a${i}`}>
               <p>&ldquo;{t.quote}&rdquo;</p>
-              <figcaption className="tcard__by">
-                <b>{t.name}</b>
-                <span>{t.role}</span>
-              </figcaption>
+              <figcaption className="tcard__by"><b>{t.name}</b><span>{t.role}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <div className="tmarquee marquee" style={{ marginTop: "1rem" }} data-marquee data-marquee-dir="right" data-marquee-speed="30">
+        <div className="marquee_track">
+          {[...rowB, ...rowB].map((t, i) => (
+            <figure className="marquee_item tcard tcard--mq" key={`b${i}`}>
+              <p>&ldquo;{t.quote}&rdquo;</p>
+              <figcaption className="tcard__by"><b>{t.name}</b><span>{t.role}</span></figcaption>
             </figure>
           ))}
         </div>

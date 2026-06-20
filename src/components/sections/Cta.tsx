@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export function Cta({
-  eyebrow = "This isn't for everyone",
-  title = "It might be for you.",
-  body = "Meridian is application-based. Every application is reviewed before access is granted — not a sales process, a qualification one.",
+  eyebrow = "Ready when you are",
+  title = "Ready to execute the plan?",
+  body = "Applications are reviewed by hand — a qualification step, not a sales funnel. Access is offered, not guaranteed.",
 }: {
   eyebrow?: string;
   title?: string;

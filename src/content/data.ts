@@ -146,7 +146,7 @@ export const PROCESS = [
   {
     n: "04",
     title: "Trade on your own capital",
-    body: "Once the engine is paying for itself, run the identical system on a personal brokerage account for higher uncapped returns — full transparency, full control.",
+    body: "Once the engine is paying for itself, run the identical system on a personal brokerage account — no profit split, no firm-imposed caps, full transparency and full control.",
   },
   {
     n: "05",
@@ -157,10 +157,10 @@ export const PROCESS = [
 
 /* ------------------------------- comparison ------------------------------ */
 export const COMPARE = {
-  themLabel: "The rest",
+  themLabel: "Typical retail algo",
   usLabel: "Meridian",
   rows: [
-    { them: "One-trick strategies", us: "Nine uncorrelated configurations" },
+    { them: "One-trick strategies", us: "Nine largely-uncorrelated configs" },
     { them: "Relies on a single session", us: "Consistent across every timeframe" },
     { them: "Martingale & grid risk", us: "No martingale. No grid. Ever." },
     { them: "Guaranteed-return claims", us: "Honest, hypothetical disclosures" },
@@ -177,6 +177,33 @@ export const AUDIENCE = [
   "Systematic traders",
   "Discretionary traders",
   "Funded-account traders",
+];
+
+export const PERSONAS = [
+  {
+    name: "Prop-firm traders",
+    body: "Pass evaluations and run funded accounts on a rules-based system. Consistent execution, defined risk, zero improvisation.",
+  },
+  {
+    name: "Personal capital",
+    body: "Run the same validated algorithms on your own brokerage account — full control, full transparency, nothing held by us.",
+  },
+  {
+    name: "Futures traders",
+    body: "Session-aware configurations built around the NY, London and Asia windows, executing to validated parameters.",
+  },
+  {
+    name: "Systematic traders",
+    body: "A documented, validated edge with four independent risk mechanisms — deploy it exactly as it was tested.",
+  },
+  {
+    name: "Discretionary traders",
+    body: "Replace gut calls with rules. Every entry, stop and target is pre-calculated before the signal ever reaches you.",
+  },
+  {
+    name: "Funded accounts",
+    body: "Protect the account that matters. Bounded risk on every signal keeps firm drawdown limits comfortably in reach.",
+  },
 ];
 
 /* ------------------------------ testimonials ----------------------------- */
@@ -315,7 +342,7 @@ export const FAQ = [
   },
   {
     q: "Can I use this at a prop firm and on my own broker?",
-    a: "Yes — that's the point. The exact same validated system runs on a funded prop-firm account or your own brokerage account. Most members start at a prop firm to trade institutional capital, then add a personal account for uncapped returns once the engine pays for itself.",
+    a: "Yes — that's the point. The exact same validated system runs on a funded prop-firm account or your own brokerage account. Most members start at a prop firm to trade institutional capital, then add a personal account once the engine pays for itself — where there's no profit split and no firm-imposed cap.",
   },
   {
     q: "What does 'run all nine at once' mean?",

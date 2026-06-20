@@ -195,12 +195,15 @@ export function SmoothScroll() {
           modifiers: { x: (x: string) => `${(parseFloat(x) % half)}px` },
         });
         gsap.set(track, { x: dir === -1 ? 0 : -half });
+        // marquee reverses with scroll direction (down = forward, up = reverse)
         ScrollTrigger.create({
           trigger: marquee,
           start: "top bottom",
           end: "bottom top",
-          onUpdate: (self: { direction: number }) =>
-            loop.timeScale(self.direction === 1 ? 1 : 0.4 * 1 + 0.6),
+          onUpdate: (self: { direction: number }) => {
+            loop.timeScale(self.direction === 1 ? 1 : -1);
+            marquee.setAttribute("data-marquee-status", self.direction === 1 ? "normal" : "inverted");
+          },
         });
       });
 
