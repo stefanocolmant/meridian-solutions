@@ -1,0 +1,27 @@
+{
+  "name": "meridian-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meridian Solutions — institutional algorithmic-trading marketing site (Next.js 16 + Tailwind v4 + GSAP/Lenis).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.11",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
