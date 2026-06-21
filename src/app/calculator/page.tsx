@@ -16,7 +16,7 @@ export default function CalculatorPage() {
         eyebrow="Project the path"
         title="Model your trajectory."
         lead="Adjust the inputs to see an illustrative path — prop-firm payouts, personal-capital compounding, or a blend. Deliberately conservative, entirely hypothetical."
-        bg="/bg/nebula-2.webp"
+        bg="/bg/footer.webp"
       />
       <section className="section" style={{ paddingTop: "clamp(24px,3vw,48px)" }}>
         <div className="container">

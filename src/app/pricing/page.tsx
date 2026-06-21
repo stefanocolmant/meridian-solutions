@@ -18,7 +18,7 @@ export default function PricingPage() {
         eyebrow="Access & pricing"
         title="License the system."
         lead="One flat monthly licence per tier. No performance fees, no profit share, no lock-in. You keep 100% of what you trade — we only license the software."
-        bg="/bg/nebula-2.webp"
+        bg="/bg/hero.webp"
       />
 
       <section className="section--tight">
