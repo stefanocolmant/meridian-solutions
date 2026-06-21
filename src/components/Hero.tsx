@@ -37,10 +37,12 @@ export function Hero({
     <section className="hero">
       <div className="hero__media" aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/bg/nebula-1.webp" alt="" />
+        <img className="hero__poster" src="/bg/hero-poster.jpg" alt="" />
+        <video className="hero__video" autoPlay muted loop playsInline preload="auto" poster="/bg/hero-poster.jpg">
+          <source src="/bg/hero.mp4" type="video/mp4" />
+        </video>
       </div>
       <Starfield className="hero__sky" />
-      <div className="hero__aurora" aria-hidden="true" />
       <div className="hero__scrim" aria-hidden="true" />
 
       <div className="hero__inner container">

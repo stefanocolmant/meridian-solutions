@@ -419,8 +419,7 @@ main { display: block; }
 }
 .mer-footer__col .eyebrow { margin-bottom: 1.1rem; }
 .mer-footer__col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; }
-.mer-footer__col a { color: rgba(237,235,231,0.66); font-size: 0.92rem; transition: color 0.3s; }
-.mer-footer__col a:hover { color: var(--signal); }
+.mer-footer__col a { color: rgba(237,235,231,0.66); font-size: 0.92rem; display: inline-block; padding: 0.12em 0.4em; margin-left: -0.4em; border-radius: 4px; }
 .mer-footer__bottom {
   display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   padding-block: clamp(1.4rem, 2.4vw, 2rem); border-top: 1px solid var(--line);
@@ -448,22 +447,11 @@ main { display: block; }
    floating frosted-glass stat chips. */
 .hero { position: relative; min-height: 100svh; background: var(--bg); overflow: hidden; display: flex; align-items: center; }
 .hero__media { position: absolute; inset: 0; z-index: 0; }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45;
-  transform-origin: center; animation: hero-drift 28s ease-in-out infinite alternate; }
-@keyframes hero-drift {
-  from { transform: scale(1.06) translate(0, 0); }
-  to   { transform: scale(1.18) translate(-2.5%, -2.5%); }
-}
-.hero__sky { position: absolute; inset: 0; z-index: 1; }
-.hero__aurora { position: absolute; inset: -25%; z-index: 1; pointer-events: none; filter: blur(70px); opacity: 0.55;
-  background:
-    radial-gradient(38% 40% at 30% 34%, rgba(204,100,55,0.32), transparent 70%),
-    radial-gradient(34% 44% at 72% 62%, rgba(96,122,160,0.22), transparent 70%);
-  animation: hero-aurora 32s ease-in-out infinite alternate; }
-@keyframes hero-aurora {
-  from { transform: translate(-3%, -2%) scale(1); }
-  to   { transform: translate(4%, 3%) scale(1.16); }
-}
+.hero__poster, .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.92; }
+.hero__poster { z-index: 0; }
+.hero__video { z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .hero__video { display: none; } }
+.hero__sky { position: absolute; inset: 0; z-index: 1; opacity: 0.4; }
 .hero__scrim { position: absolute; inset: 0; z-index: 1;
   background: radial-gradient(120% 92% at 50% 30%, rgba(11,11,11,0.30), rgba(11,11,11,0.78) 72%, #0b0b0b 100%); }
 .hero__inner {
@@ -731,3 +719,56 @@ input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18p
 
 /* risk disclosure block (/start) */
 .risk-block { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.8rem,4vw,3rem); background: radial-gradient(120% 140% at 50% 0%, rgba(204,100,55,0.05), transparent 55%); }
+
+/* ========================= MOTION PORT (v3) ========================= */
+
+/* button glow on hover (parallel to the fill underlay) */
+.btn:hover { box-shadow: 0 0 20px rgba(237,235,231,0.16), inset 0 0 18px rgba(237,235,231,0.08); }
+.btn--solid:hover { box-shadow: 0 0 26px rgba(204,100,55,0.40); }
+
+/* directional list-hover — pseudo-fill slides in from the edge nearest the cursor.
+   Driven by --lh-tf set in JS; no DOM mutation, so flex/grid rows stay intact. */
+[data-list-item] { position: relative; overflow: hidden; isolation: isolate; transition: color 0.35s ease;
+  --hover-fill: var(--color-cream); --hover-ink: var(--color-ink); }
+[data-list-item]::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--hover-fill); transform: var(--lh-tf, translateY(101%));
+  transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+}
+[data-list-item].lh-instant::before { transition: none; }
+[data-list-item][data-lh="in"] { color: var(--hover-ink); }
+/* on dark sections the cream fill inverts text to ink; on cream sections flip */
+.section.is-cream [data-list-item] { --hover-fill: var(--color-ink); --hover-ink: var(--color-cream); }
+
+/* ===================== FROSTED GLASS CARDS (v3) ===================== */
+/* the "light greyish see-through" surfaces the user loves */
+.card, .tier, .vcard, .curve, .tcard, .auth, .calc, .deploy-grid, .cmp, .metric-grid {
+  backdrop-filter: blur(13px) saturate(1.15);
+  -webkit-backdrop-filter: blur(13px) saturate(1.15);
+}
+.card, .tier, .vcard, .curve, .tcard, .auth {
+  background: rgba(237, 235, 231, 0.05);
+  border-color: rgba(237, 235, 231, 0.12);
+  box-shadow: inset 0 1px 0 rgba(237, 235, 231, 0.06);
+}
+.tier--feature { background: rgba(204,100,55,0.07); }
+.section.is-cream .card,
+.section.is-cream .tier,
+.section.is-cream .vcard,
+.section.is-cream .curve,
+.section.is-cream .tcard {
+  background: rgba(11, 11, 11, 0.035);
+  border-color: rgba(11, 11, 11, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+/* faint section glows so the glass has something to refract */
+.section { position: relative; }
+.tiers, .grid-3, .grid-4 { position: relative; }
+.tiers::before, .bigstat::before {
+  content: ""; position: absolute; inset: -10% -5%; z-index: -1; pointer-events: none;
+  background: radial-gradient(50% 60% at 30% 0%, rgba(204,100,55,0.06), transparent 70%),
+              radial-gradient(45% 55% at 80% 100%, rgba(96,122,160,0.05), transparent 70%);
+}
+
+/* hover lift on glass cards */
+.tier:hover, .vcard:hover, .curve:hover, .card:hover { transform: translateY(-3px); }

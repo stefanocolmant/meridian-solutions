@@ -223,6 +223,74 @@ export function SmoothScroll() {
         });
       }
 
+      // ---------- card clip-path wipe reveal ----------
+      const wipeOK = !reduced && window.matchMedia("(min-width: 768px)").matches;
+      document.querySelectorAll<HTMLElement>("[data-cards]").forEach((grid) => {
+        if (grid.dataset.cardsInit === "1") return;
+        grid.dataset.cardsInit = "1";
+        const cards = Array.from(grid.children) as HTMLElement[];
+        if (!cards.length || !wipeOK) return;
+        gsap.set(cards, { clipPath: "inset(0 100% 0 0)", opacity: 1 });
+        ScrollTrigger.create({
+          trigger: grid,
+          start: "top 82%",
+          once: true,
+          onEnter: () =>
+            gsap.to(cards, {
+              clipPath: "inset(0 0% 0 0)",
+              duration: 1,
+              ease: "expo.out",
+              stagger: 0.15,
+              onComplete: () => gsap.set(cards, { clipPath: "none" }),
+            }),
+        });
+      });
+
+      // ---------- directional list-hover (overlay slides from nearest edge) ----------
+      const hoverable =
+        window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+        window.matchMedia("(min-width: 1025px)").matches;
+      if (hoverable) {
+        const edge: Record<string, string> = {
+          top: "translateY(-101%)",
+          bottom: "translateY(101%)",
+          left: "translateX(-101%)",
+          right: "translateX(101%)",
+        };
+        const nearest = (ev: MouseEvent, el: HTMLElement): string => {
+          const r = el.getBoundingClientRect();
+          const cx = ev.clientX - r.left;
+          const cy = ev.clientY - r.top;
+          const d: Record<string, number> = { top: cy, right: r.width - cx, bottom: r.height - cy, left: cx };
+          return Object.entries(d).reduce((a, b) => (a[1] < b[1] ? a : b))[0];
+        };
+        // pseudo-element fill driven by --lh-tf (no DOM mutation → layout-safe)
+        document.querySelectorAll<HTMLElement>("[data-list-item]").forEach((item) => {
+          if (item.dataset.lhInit === "1") return;
+          item.dataset.lhInit = "1";
+          const onEnter = (ev: MouseEvent) => {
+            const s = nearest(ev, item);
+            item.classList.add("lh-instant");
+            item.style.setProperty("--lh-tf", edge[s]); // jump to the entering edge
+            void item.offsetHeight; // reflow so the start state sticks
+            item.classList.remove("lh-instant");
+            item.style.setProperty("--lh-tf", "translate(0%, 0%)"); // slide in
+            item.setAttribute("data-lh", "in");
+          };
+          const onLeave = (ev: MouseEvent) => {
+            const s = nearest(ev, item);
+            item.style.setProperty("--lh-tf", edge[s]); // slide out toward nearest edge
+            item.setAttribute("data-lh", "out");
+          };
+          item.addEventListener("mouseenter", onEnter);
+          item.addEventListener("mouseleave", onLeave);
+          reverts.push(() => {
+            item.removeEventListener("mouseenter", onEnter);
+            item.removeEventListener("mouseleave", onLeave);
+          });
+        });
+      }
+
       ScrollTrigger.refresh();
 
       cleanup = () => {

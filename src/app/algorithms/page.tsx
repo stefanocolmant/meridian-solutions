@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { AlgoTiers } from "@/components/sections/AlgoTiers";
-import { EquityCurves } from "@/components/sections/EquityCurves";
 import { RunAll } from "@/components/sections/RunAll";
-import { Validation } from "@/components/sections/Validation";
+import { SignalAnatomy, RiskMechanisms } from "@/components/sections/extras";
 import { Cta } from "@/components/sections/Cta";
 import { SectionHead } from "@/components/ui";
 import { ALGOS, ASSET } from "@/content/data";
@@ -63,13 +62,15 @@ export default function AlgorithmsPage() {
         </div>
       </section>
 
+      <SignalAnatomy />
+
       {/* coverage detail */}
       <section className="section">
         <div className="container">
           <SectionHead eyebrow="Session coverage" title="Where each system trades." className="reveal" />
-          <div className="grid-3" style={{ marginTop: "clamp(2rem,4vw,3rem)" }} data-reveal="0.12">
+          <div className="grid-3" style={{ marginTop: "clamp(2rem,4vw,3rem)" }} data-cards>
             {ALGOS.map((a) => (
-              <div className="card reveal" key={a.key} style={{ padding: "clamp(1.4rem,2.4vw,2rem)", display: "flex", flexDirection: "column", gap: "1.1rem" }}>
+              <div className="card" key={a.key} style={{ padding: "clamp(1.4rem,2.4vw,2rem)", display: "flex", flexDirection: "column", gap: "1.1rem" }}>
                 <div>
                   <div className="tier__name">{a.name}</div>
                   <div className="tier__rank">{a.tier} · {a.configs} configs</div>
@@ -87,9 +88,8 @@ export default function AlgorithmsPage() {
         </div>
       </section>
 
-      <EquityCurves />
       <RunAll />
-      <Validation />
+      <RiskMechanisms />
       <Cta title="Find your starting line." body="Apply to license Compass, Sextant, or the complete Polaris suite. Every application is reviewed by hand." />
     </>
   );

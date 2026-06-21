@@ -17,9 +17,9 @@ export function WhyProp() {
           intro="The fastest, lowest-risk way to deploy a validated system at size — without tying up your own capital first."
           className="reveal"
         />
-        <div className="grid-4" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-reveal="0.1">
+        <div className="grid-4" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-cards>
           {CARDS.map((c) => (
-            <div className="card reveal" key={c.n} style={{ padding: "clamp(1.4rem,2.4vw,2rem)" }}>
+            <div className="card" key={c.n} style={{ padding: "clamp(1.4rem,2.4vw,2rem)" }}>
               <span className="idx">{c.n}</span>
               <h3 className="display d-sm" style={{ margin: "1rem 0 0.7rem", fontSize: "clamp(1.3rem,2vw,1.7rem)" }}>{c.t}</h3>
               <p className="muted" style={{ margin: 0, fontSize: "0.92rem" }}>{c.d}</p>

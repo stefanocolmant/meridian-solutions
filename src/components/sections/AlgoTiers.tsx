@@ -18,9 +18,9 @@ export function AlgoTiers({
           />
         )}
 
-        <div className="tiers" style={{ marginTop: showHead ? "clamp(2.5rem,5vw,4rem)" : 0 }} data-reveal="0.12">
+        <div className="tiers" style={{ marginTop: showHead ? "clamp(2.5rem,5vw,4rem)" : 0 }} data-cards>
           {ALGOS.map((a) => (
-            <article className={`tier reveal ${a.rank === "Core" ? "tier--feature" : ""}`} key={a.key}>
+            <article className={`tier ${a.rank === "Core" ? "tier--feature" : ""}`} key={a.key}>
               {a.rank === "Core" && <span className="tier__badge">Most popular</span>}
               <div className="tier__top">
                 <div>

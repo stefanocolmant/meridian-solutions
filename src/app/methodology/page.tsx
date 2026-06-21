@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Validation } from "@/components/sections/Validation";
-import { Process } from "@/components/sections/Process";
+import { RiskMechanisms, NoBlackBox } from "@/components/sections/extras";
 import { Cta } from "@/components/sections/Cta";
 import { SectionHead } from "@/components/ui";
 
@@ -63,9 +63,9 @@ export default function MethodologyPage() {
       <section className="section is-cream">
         <div className="container">
           <SectionHead eyebrow="The architecture" title="Four operational layers." className="reveal" />
-          <div className="grid-4" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-reveal="0.1">
+          <div className="grid-4" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-cards>
             {LAYERS.map((l) => (
-              <div className="card reveal" key={l.n} style={{ padding: "clamp(1.4rem,2.4vw,2rem)" }}>
+              <div className="card" key={l.n} style={{ padding: "clamp(1.4rem,2.4vw,2rem)" }}>
                 <span className="idx">{l.n}</span>
                 <h3 className="display" style={{ fontSize: "clamp(1.3rem,2vw,1.7rem)", margin: "1rem 0 0.7rem" }}>{l.t}</h3>
                 <p className="muted" style={{ margin: 0, fontSize: "0.92rem" }}>{l.d}</p>
@@ -75,8 +75,9 @@ export default function MethodologyPage() {
         </div>
       </section>
 
+      <RiskMechanisms />
       <Validation />
-      <Process />
+      <NoBlackBox />
       <Cta title="See if it's a fit." body="Methodology only matters if you'll follow it. Apply and we'll find out together on the call." />
     </>
   );

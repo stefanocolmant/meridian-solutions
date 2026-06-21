@@ -11,9 +11,9 @@ export function Validation() {
           intro={`Before a configuration ships, it has to survive a gauntlet. ${ASSET.validation}`}
           className="reveal"
         />
-        <div className="grid-3" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-reveal="0.12">
+        <div className="grid-3" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-cards>
           {VALIDATION.map((v) => (
-            <article className="vcard reveal" key={v.n}>
+            <article className="vcard" key={v.n}>
               <div className="vcard__img">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={v.image} alt={`${v.title} chart`} loading="lazy" />

@@ -13,6 +13,7 @@ export function Faq({ items = FAQ, limit }: { items?: typeof FAQ; limit?: number
         <div className="acc-item" key={item.q} data-open={open === i}>
           <button
             className="acc-head"
+            data-list-item
             onClick={() => setOpen(open === i ? null : i)}
             aria-expanded={open === i}
           >

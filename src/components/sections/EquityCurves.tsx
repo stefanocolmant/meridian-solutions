@@ -11,9 +11,9 @@ export function EquityCurves() {
           intro="Modeled growth across the 15-month validation window for each tier. Hypothetical and educational — results are not typical and not a live account."
           className="reveal"
         />
-        <div className="grid-3" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-reveal="0.12">
+        <div className="grid-3" style={{ marginTop: "clamp(2.5rem,5vw,3.5rem)" }} data-cards>
           {ALGOS.map((a) => (
-            <figure className="curve reveal" key={a.key} style={{ margin: 0 }}>
+            <figure className="curve" key={a.key} style={{ margin: 0 }}>
               <div className="curve__img">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={a.curve} alt={`${a.name} hypothetical equity curve`} loading="lazy" />

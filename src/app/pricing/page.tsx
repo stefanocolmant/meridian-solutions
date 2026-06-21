@@ -23,9 +23,9 @@ export default function PricingPage() {
 
       <section className="section--tight">
         <div className="container">
-          <div className="tiers" data-reveal="0.12">
+          <div className="tiers" data-cards>
             {PRICING.map((p) => (
-              <article className={`tier reveal ${p.highlight ? "tier--feature" : ""}`} key={p.key}>
+              <article className={`tier ${p.highlight ? "tier--feature" : ""}`} key={p.key}>
                 {p.highlight && <span className="tier__badge">Most popular</span>}
                 <div>
                   <div className="tier__name">{p.name}</div>

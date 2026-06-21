@@ -57,7 +57,7 @@ export function Footer() {
             <ul>
               {col.links.map((l) => (
                 <li key={l.label + l.href}>
-                  <Link href={l.href}>{l.label}</Link>
+                  <Link href={l.href} data-list-item>{l.label}</Link>
                 </li>
               ))}
             </ul>

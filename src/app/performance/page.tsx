@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { StatsBand } from "@/components/sections/StatsBand";
 import { EquityCurves } from "@/components/sections/EquityCurves";
-import { Validation } from "@/components/sections/Validation";
+import { RiskReturn } from "@/components/sections/extras";
 import { Trades } from "@/components/sections/Trades";
 import { SectionHead } from "@/components/ui";
 import { PERF_METRICS, MONTHLY_PNL, DISCLOSURES } from "@/content/data";
@@ -67,7 +67,7 @@ export default function PerformancePage() {
       </section>
 
       <EquityCurves />
-      <Validation />
+      <RiskReturn />
       <Trades />
 
       {/* disclosures */}
