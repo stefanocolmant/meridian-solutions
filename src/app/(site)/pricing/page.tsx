@@ -8,7 +8,7 @@ import { PRICING } from "@/content/data";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "License Compass, Sextant or Polaris. Simple monthly access, application-gated.",
+  description: "License Compass, Vega or Polaris. Simple monthly access, application-gated.",
 };
 
 export default function PricingPage() {

@@ -35,8 +35,8 @@ export const ALGOS: Algo[] = [
     curve: "/curves/curve-1.png",
   },
   {
-    key: "sextant",
-    name: "Sextant",
+    key: "vega",
+    name: "Vega",
     tier: "Tier II",
     rank: "Core",
     configs: 7,
@@ -65,7 +65,7 @@ export const ALGOS: Algo[] = [
     profitFactor: "1.846",
     monthsProfitable: "14 / 15",
     coverage: [
-      "Everything in Sextant",
+      "Everything in Vega",
       "Morning Overlap",
       "Overnight 2m",
       "Full DFO suite",
@@ -120,7 +120,7 @@ export const VALIDATION = [
 
 /* ----------------------------- value pillars ----------------------------- */
 export const PILLARS = [
-  { stat: "3", label: "Validated algorithms", sub: "Compass · Sextant · Polaris" },
+  { stat: "3", label: "Validated algorithms", sub: "Compass · Vega · Polaris" },
   { stat: "9", label: "Total configurations", sub: "Run them together or à la carte" },
   { stat: "100%", label: "Account control", sub: "We never hold or touch your capital" },
   { stat: "4", label: "Risk mechanisms", sub: "Built into every signal" },
@@ -297,8 +297,8 @@ export const PRICING = [
     ],
   },
   {
-    key: "sextant",
-    name: "Sextant",
+    key: "vega",
+    name: "Vega",
     tier: "Tier II · Core",
     price: "$399",
     cadence: "/ month",
@@ -321,7 +321,7 @@ export const PRICING = [
     configs: "9 configurations",
     highlight: false,
     features: [
-      "Everything in Sextant",
+      "Everything in Vega",
       "Morning Overlap + Overnight 2m",
       "Full DFO suite + Custom Mode",
       "Run all 9 for the smoothest curve",
@@ -334,7 +334,7 @@ export const PRICING = [
 export const FAQ = [
   {
     q: "What is Meridian Solutions?",
-    a: "Meridian licenses three validated futures algorithms — Compass, Sextant, and Polaris — directly to traders. Each signal arrives with a defined entry, stop, and target, so you execute a documented plan instead of trading on instinct. We provide software and education; we are not a broker or a money manager.",
+    a: "Meridian licenses three validated futures algorithms — Compass, Vega, and Polaris — directly to traders. Each signal arrives with a defined entry, stop, and target, so you execute a documented plan instead of trading on instinct. We provide software and education; we are not a broker or a money manager.",
   },
   {
     q: "How does it actually work?",

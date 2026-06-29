@@ -31,3 +31,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# session QA artifacts
+.critique/

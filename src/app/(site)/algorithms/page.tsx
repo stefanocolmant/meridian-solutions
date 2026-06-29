@@ -9,7 +9,7 @@ import { ALGOS, ASSET } from "@/content/data";
 
 export const metadata: Metadata = {
   title: "Algorithms",
-  description: "Compass, Sextant and Polaris — three validated NQ futures algorithms with nine configurations.",
+  description: "Compass, Vega and Polaris — three validated NQ futures algorithms with nine configurations.",
 };
 
 export default function AlgorithmsPage() {
@@ -17,7 +17,7 @@ export default function AlgorithmsPage() {
     <>
       <PageHero
         eyebrow="The algorithms"
-        title="Compass. Sextant. Polaris."
+        title="Compass. Vega. Polaris."
         lead="Three validated systems, nine configurations, one discipline. Each tier widens session coverage — choose your starting point, then grow into the full suite."
         bg="/bg/nebula-2.webp"
       />
@@ -90,7 +90,7 @@ export default function AlgorithmsPage() {
 
       <RunAll />
       <RiskMechanisms />
-      <Cta title="Find your starting line." body="Apply to license Compass, Sextant, or the complete Polaris suite. Every application is reviewed by hand." />
+      <Cta title="Find your starting line." body="Apply to license Compass, Vega, or the complete Polaris suite. Every application is reviewed by hand." />
     </>
   );
 }
