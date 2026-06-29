@@ -107,7 +107,7 @@ export function Badge({
 }
 
 export function TierTag({ tier }: { tier: string }) {
-  const t = tier.toLowerCase();
+  const t = tier.toLowerCase().replace(/\s+/g, "");
   return <span className={cn("p-tier", t)}>{tier}</span>;
 }
 

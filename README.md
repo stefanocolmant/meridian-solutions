@@ -10,9 +10,9 @@ Three validated NQ E-mini futures algorithms, licensed directly to traders. Ever
 
 | System | Tier | Configs | Net P&L (15mo) | Profit factor |
 |---|---|---|---|---|
-| **Compass** | Entry | 4 | +$106,600 | 1.787 |
-| **Quadrant** | Core | 7 | +$225,264 | 1.806 |
-| **Polaris** | Complete | 9 | +$262,437 | 1.846 |
+| **Delta Flow** | Entry | 4 | +$106,600 | 1.787 |
+| **Delta Vision** | Core | 7 | +$225,264 | 1.806 |
+| **Scalprophecy** | Complete | 9 | +$262,437 | 1.846 |
 
 Run all nine configurations together for the smoothest aggregate equity curve.
 

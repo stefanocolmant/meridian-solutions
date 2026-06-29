@@ -382,11 +382,11 @@ export default function MilestonesPage() {
           >
             <span className="p-stat__label">Verified waypoints raise your standing</span>
             <div className="p-row" style={{ gap: "0.5rem", marginTop: "0.7rem" }}>
-              <TierTag tier="Compass" />
+              <TierTag tier="Delta Flow" />
               <span className="muted">→</span>
-              <TierTag tier="Quadrant" />
+              <TierTag tier="Delta Vision" />
               <span className="muted">→</span>
-              <TierTag tier="Polaris" />
+              <TierTag tier="Scalprophecy" />
             </div>
           </div>
         </Panel>

@@ -60,7 +60,7 @@ const SEED: Message[] = [
     id: 5,
     senderRole: "admin",
     senderName: "Meridian Desk",
-    body: "That's the gap — you're missing the strategy field. Add \"strategy\":\"polaris-nq\" and TradersPost will match it. Keep the forwarding URL exactly as " + ME.forwardingUrl + " and fire a test alert when you're ready.",
+    body: "That's the gap — you're missing the strategy field. Add \"strategy\":\"scalprophecy-nq\" and TradersPost will match it. Keep the forwarding URL exactly as " + ME.forwardingUrl + " and fire a test alert when you're ready.",
     time: "9:33 AM",
     read: true,
   },
@@ -149,7 +149,7 @@ export default function SupportPage() {
         eyebrow="1-on-1"
         title="Support"
         sub="A private line to the Meridian Desk for setup, webhooks and account questions. Threads stay open — pick up where you left off."
-        actions={<span className="tag">Polaris priority</span>}
+        actions={<span className="tag">Scalprophecy priority</span>}
       />
 
       <div className="p-split">

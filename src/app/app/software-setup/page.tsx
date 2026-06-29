@@ -25,7 +25,7 @@ interface ChecklistItem { label: string; note: string; done: boolean; }
 const CHECKLIST_INIT: ChecklistItem[] = [
   { label: "Connect your TradingView account", note: "Pro plan or higher — required for server-side alerts.", done: true },
   { label: "Add the Meridian master chart template", note: "Loads every session config in one layout.", done: true },
-  { label: `Grant indicator access to ${ME.tvUsername}`, note: "We unlock the Polaris invite-only study on that handle.", done: true },
+  { label: `Grant indicator access to ${ME.tvUsername}`, note: "We unlock the Scalprophecy invite-only study on that handle.", done: true },
   { label: "Paste the webhook URL into your alert", note: "Use the forwarding endpoint from step 2.", done: false },
   { label: "Paste the alert message payload", note: "Copy the JSON body exactly — placeholders included.", done: false },
   { label: `Connect ${ME.automationPlatform} to your broker`, note: "Authorize the execution bridge for each account.", done: false },

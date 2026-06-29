@@ -41,16 +41,16 @@ interface DemoUser {
 }
 
 /* Demo accounts. Hashes generated with PBKDF2-SHA256, 120k iters, 256-bit key.
-   Plaintext (demo only):  demo@meridiansolutions.co / Polaris-2026
+   Plaintext (demo only):  demo@meridiansolutions.co / Scalprophecy-2026
                            admin@meridiansolutions.co / Meridian-Admin          */
 const USERS: DemoUser[] = [
   {
     email: "demo@meridiansolutions.co",
     name: "Jordan Reyes",
     role: "user",
-    tier: "Polaris",
-    salt: "kfdNwjSwNh/ZbC/GYMxKeg==",
-    hash: "GiMQaZalvFuEEZ1KtMx18LRDpyPBf4yL/swoxlPp6gw=",
+    tier: "Scalprophecy",
+    salt: "IfOuJEhI0OtR41U+2hI1QQ==",
+    hash: "KLrD6zwUOXVtYpLH8Rhw6uHMMnp3AjskoPipFgXzwkc=",
   },
   {
     email: "admin@meridiansolutions.co",

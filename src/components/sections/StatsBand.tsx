@@ -2,10 +2,10 @@ import { Counter } from "@/components/Counter";
 import { SectionHead } from "@/components/ui";
 
 const STATS = [
-  { node: <Counter value={1.846} decimals={3} />, label: "Profit factor", note: "Polaris · 15-month validation" },
+  { node: <Counter value={1.846} decimals={3} />, label: "Profit factor", note: "Scalprophecy · 15-month validation" },
   { node: <Counter value={93} suffix="%" />, label: "Months profitable", note: "14 of 15 months" },
   { node: <Counter value={9} />, label: "Configurations", note: "Run together for a smoother curve" },
-  { node: <Counter value={262437} prefix="+$" />, label: "Net P&L", note: "Polaris · hypothetical, 15 mo" },
+  { node: <Counter value={262437} prefix="+$" />, label: "Net P&L", note: "Scalprophecy · hypothetical, 15 mo" },
 ];
 
 export function StatsBand({ head = true }: { head?: boolean }) {

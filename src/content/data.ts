@@ -20,8 +20,8 @@ export type Algo = {
 
 export const ALGOS: Algo[] = [
   {
-    key: "compass",
-    name: "Compass",
+    key: "deltaflow",
+    name: "Delta Flow",
     tier: "Tier I",
     rank: "Entry",
     configs: 4,
@@ -35,8 +35,8 @@ export const ALGOS: Algo[] = [
     curve: "/curves/curve-1.png",
   },
   {
-    key: "quadrant",
-    name: "Quadrant",
+    key: "deltavision",
+    name: "Delta Vision",
     tier: "Tier II",
     rank: "Core",
     configs: 7,
@@ -45,7 +45,7 @@ export const ALGOS: Algo[] = [
     profitFactor: "1.806",
     monthsProfitable: "14 / 15",
     coverage: [
-      "Everything in Compass",
+      "Everything in Delta Flow",
       "Asia Early",
       "Timeframe variants",
       "DFO + HA filters",
@@ -55,8 +55,8 @@ export const ALGOS: Algo[] = [
     curve: "/curves/curve-2.jpg",
   },
   {
-    key: "polaris",
-    name: "Polaris",
+    key: "scalprophecy",
+    name: "Scalprophecy",
     tier: "Tier III",
     rank: "Complete",
     configs: 9,
@@ -65,7 +65,7 @@ export const ALGOS: Algo[] = [
     profitFactor: "1.846",
     monthsProfitable: "14 / 15",
     coverage: [
-      "Everything in Quadrant",
+      "Everything in Delta Vision",
       "Morning Overlap",
       "Overnight 2m",
       "Full DFO suite",
@@ -120,7 +120,7 @@ export const VALIDATION = [
 
 /* ----------------------------- value pillars ----------------------------- */
 export const PILLARS = [
-  { stat: "3", label: "Validated algorithms", sub: "Compass · Quadrant · Polaris" },
+  { stat: "3", label: "Validated algorithms", sub: "Delta Flow · Delta Vision · Scalprophecy" },
   { stat: "9", label: "Total configurations", sub: "Run them together or à la carte" },
   { stat: "100%", label: "Account control", sub: "We never hold or touch your capital" },
   { stat: "4", label: "Risk mechanisms", sub: "Built into every signal" },
@@ -160,12 +160,14 @@ export const COMPARE = {
   themLabel: "Typical retail algo",
   usLabel: "Meridian",
   rows: [
-    { them: "One-trick strategies", us: "Nine largely-uncorrelated configs" },
-    { them: "Relies on a single session", us: "Consistent across every timeframe" },
-    { them: "Martingale & grid risk", us: "No martingale. No grid. Ever." },
-    { them: "Guaranteed-return claims", us: "Honest, hypothetical disclosures" },
-    { them: "Off-the-shelf, resold systems", us: "Built and validated in-house" },
-    { them: "Unstable, untested performance", us: "Stress-tested three different ways" },
+    { them: "One strategy trying to do everything", us: "Up to nine complementary configurations" },
+    { them: "Built around one session or market condition", us: "Designed for broader session and market coverage" },
+    { them: "Martingale, grid, or escalating risk", us: "No martingale. No grid. Defined risk on every trade." },
+    { them: "Generic, off-the-shelf software", us: "Proprietary technology built and tested in-house" },
+    { them: "Limited testing before launch", us: "Historical, Monte Carlo, noise, and variance testing" },
+    { them: "Requires constant manual trade management", us: "Fully automated from signal generation through execution" },
+    { them: "Limited flexibility and control", us: "You control the accounts, settings, risk, and automation" },
+    { them: "Built for one account", us: "Deploy across prop-firm or personal brokerage accounts" },
   ],
 };
 
@@ -207,50 +209,74 @@ export const PERSONAS = [
 ];
 
 /* ------------------------------ testimonials ----------------------------- */
-export const TESTIMONIALS = [
+// Financial / payout testimonials — large dollar figures as visual proof.
+export const FINANCIAL_TESTIMONIALS = [
+  {
+    result: "$26,000 in payouts over 30 days",
+    quote:
+      "I just received my final payout of the week and closed out $26,000 in payouts over 30 days. After Lucid's 10% share, my take-home was $23,400. If I was able to do it, we all are able to. Stay at it and don't quit, even when it hurts. One day, it can come together.",
+    name: "Matthew",
+    role: "Prop-Firm Trader",
+    image: "/trades/trade-04.jpg",
+  },
+  {
+    result: "$18,000 in payouts",
+    quote:
+      "From March 18 through April 10, I received $18,000 in payouts. God knows I needed this. Praise be to God, and thanks to @DoctorProfit for the lessons, guidance, mentorship, and friendship. Truly blessed.",
+    name: "Mat",
+    role: "Prop-Firm Trader",
+    image: "/trades/trade-09.jpg",
+  },
+  {
+    result: "$7,000 withdrawn in three weeks",
+    quote:
+      "I took $7,000 in withdrawals over the past three weeks. This was from a personal account.",
+    name: "Alex Soto",
+    role: "Personal-Account Trader",
+    image: "/trades/trade-13.jpg",
+  },
+];
+
+// Personal / experience testimonials.
+export const PERSONAL_TESTIMONIALS = [
   {
     quote:
-      "I've been part of the Meridian community for quite some time. I was the one in the back of the class who paid attention but did not always apply himself. I'm grateful for their patience and for not giving up on me. After a very difficult period in my life, I reached out for help so I could focus and take care of my kids. The team personally took the time to help me set up my futures account and get Polaris running. As a result, I am live and blessed. Thank you, Meridian.",
-    name: "Alex Soto",
+      "Thank you so much, Dr. Profit. Your Scalp Pro and DFV tools gave me so much confidence and visibility, while always remembering your hardcore rule of risk management.",
+    name: "Brandon",
     role: "Futures Trader",
   },
   {
     quote:
-      "I took $7,000 in withdrawals over the past three weeks from a personal account.",
-    name: "Verified member",
-    role: "Personal-Account Trader",
-  },
-  /* PLACEHOLDER — DO NOT PUBLISH. Temporary cards retained during development;
-     replace with approved, compliance-reviewed testimonials before launch. */
-  {
-    quote:
-      "It removed the part of trading I kept getting wrong: me. Entry, stop, and target are set before I ever see the trade.",
-    name: "D. Okafor",
-    role: "Funded-account trader",
+      "On May 29, I will complete exactly five years with Doc. I went from being completely broke to becoming who I am today, including two years as a full-time trader. Five years with my true brother and real backbone, @DoctorProfit. Forever grateful, my brother.",
+    name: "Khaled Kamel",
+    role: "Full-Time Trader",
   },
   {
     quote:
-      "I went from second-guessing every entry to following a written plan. The rules don't flinch — and now neither do I.",
-    name: "R. Vance",
-    role: "Prop-firm trader",
+      "Closing out March with two payouts processing from this past week. As always, a huge thank-you to @DoctorProfit for the support, for checking in, and for keeping me on track. I'm constantly motivated by everyone who continues to show up daily and work these markets.",
+    name: "Beth",
+    role: "Trader and Community Member",
   },
   {
     quote:
-      "I run the same validated system on my own account. Full transparency, full control, nothing held by anyone but me.",
-    name: "S. Marés",
-    role: "Personal-capital trader",
+      "I've been a friend and student of @DoctorProfit for quite some time. I'm grateful to Doc for his patience and for not giving up on me. After a very difficult period, I reached out for help so I could focus and take care of my kids. He personally took the time to help me set up my futures account and Scalp Pro. As a result, I am live and blessed.",
+    name: "Byron Green",
+    role: "Futures Trader",
   },
 ];
+
+// Marketing testimonials section consumes the personal set.
+export const TESTIMONIALS = PERSONAL_TESTIMONIALS;
 
 /* --------------------------------- stats --------------------------------- */
 export const HEADLINE_STATS = [
-  { value: "1.846", label: "Profit factor", note: "Polaris · 15-month validation" },
+  { value: "1.846", label: "Profit factor", note: "Scalprophecy · 15-month validation" },
   { value: "93%", label: "Months profitable", note: "14 of 15 months" },
   { value: "9", label: "Configurations", note: "Run together for a smoother curve" },
-  { value: "+$262,437", label: "Net P&L", note: "Polaris · hypothetical, 15 mo" },
+  { value: "+$262,437", label: "Net P&L", note: "Scalprophecy · hypothetical, 15 mo" },
 ];
 
-// 15-month hypothetical monthly P&L for Polaris (sums to +$262,437; 14 green / 1 red)
+// 15-month hypothetical monthly P&L for Scalprophecy (sums to +$262,437; 14 green / 1 red)
 export const MONTHLY_PNL: { month: string; pnl: number }[] = [
   { month: "Jan '25", pnl: 12400 },
   { month: "Feb '25", pnl: 18900 },
@@ -283,8 +309,8 @@ export const PERF_METRICS = [
 /* --------------------------------- pricing ------------------------------- */
 export const PRICING = [
   {
-    key: "compass",
-    name: "Compass",
+    key: "deltaflow",
+    name: "Delta Flow",
     tier: "Tier I · Entry",
     price: "$249",
     cadence: "/ month",
@@ -299,15 +325,15 @@ export const PRICING = [
     ],
   },
   {
-    key: "quadrant",
-    name: "Quadrant",
+    key: "deltavision",
+    name: "Delta Vision",
     tier: "Tier II · Core",
     price: "$399",
     cadence: "/ month",
     configs: "7 configurations",
     highlight: true,
     features: [
-      "Everything in Compass",
+      "Everything in Delta Flow",
       "Asia Early + timeframe variants",
       "DFO + HA adaptive filters",
       "Priority onboarding call",
@@ -315,15 +341,15 @@ export const PRICING = [
     ],
   },
   {
-    key: "polaris",
-    name: "Polaris",
+    key: "scalprophecy",
+    name: "Scalprophecy",
     tier: "Tier III · Complete",
     price: "$599",
     cadence: "/ month",
     configs: "9 configurations",
     highlight: false,
     features: [
-      "Everything in Quadrant",
+      "Everything in Delta Vision",
       "Morning Overlap + Overnight 2m",
       "Full DFO suite + Custom Mode",
       "Run all 9 for the smoothest curve",
@@ -336,7 +362,7 @@ export const PRICING = [
 export const FAQ = [
   {
     q: "What is Meridian Trading Solutions?",
-    a: "Meridian Trading Solutions licenses institutional-grade automated futures trading technology directly to traders. Compass, Quadrant, and Polaris are three levels of access and service built on the same underlying system. Qualified trades are automatically routed and executed through supported client-controlled accounts according to predefined entries, stops, targets, and risk settings. Meridian provides software, setup assistance, and education; it does not custody customer funds, manage brokerage accounts, or take discretionary control of trading.",
+    a: "Meridian Trading Solutions licenses institutional-grade automated futures trading technology directly to traders. Delta Flow, Delta Vision, and Scalprophecy are three levels of access and service built on the same underlying system. Qualified trades are automatically routed and executed through supported client-controlled accounts according to predefined entries, stops, targets, and risk settings. Meridian provides software, setup assistance, and education; it does not custody customer funds, manage brokerage accounts, or take discretionary control of trading.",
   },
   {
     q: "How does it actually work?",
@@ -348,7 +374,7 @@ export const FAQ = [
   },
   {
     q: "What does 'run all nine at once' mean?",
-    a: "Polaris includes nine configurations covering different sessions, timeframes and conditions. Because they're largely uncorrelated, running them together diversifies your exposure — the aggregate equity curve is noticeably smoother than any single configuration traded on its own.",
+    a: "Scalprophecy includes nine configurations covering different sessions, timeframes and conditions. Because they're largely uncorrelated, running them together diversifies your exposure — the aggregate equity curve is noticeably smoother than any single configuration traded on its own.",
   },
   {
     q: "What can I realistically expect?",
@@ -392,4 +418,10 @@ export const DISCLOSURES = {
     "Trading futures and leveraged products involves substantial risk of loss and is not suitable for everyone. Past performance is not indicative of future results. Meridian Trading Solutions provides software and education only — it is not a broker, financial advisor, or account-management service, and nothing here is financial or trading advice.",
   testimonial:
     "Testimonials reflect individual experiences and are not representative of all clients. Trading results vary, and no result is guaranteed.",
+  heroNote: "Based on a 15-month hypothetical performance test.",
+  perfNote:
+    "Performance shown is based on a 15-month hypothetical test. Past or hypothetical results do not guarantee future performance.",
+  resultsVary: "Individual experiences and results vary.",
+  footer:
+    "Futures trading involves risk. Results shown may include hypothetical testing and individual client experiences. Past results do not guarantee future performance.",
 };

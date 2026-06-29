@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Cta({
   eyebrow = "Ready when you are",
-  title = "Ready to execute the plan?",
+  title = "Ready to automate your execution?",
   body = "Applications are reviewed by hand — a qualification step, not a sales funnel. Access is offered, not guaranteed.",
 }: {
   eyebrow?: string;

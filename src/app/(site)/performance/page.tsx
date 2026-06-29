@@ -48,7 +48,7 @@ export default function PerformancePage() {
         <div className="container">
           <SectionHead
             eyebrow="Month by month"
-            title="The calendar — Polaris."
+            title="The calendar — Scalprophecy."
             intro="Hypothetical monthly P&L across the validation window for the full nine-configuration suite. Fourteen of fifteen months closed green."
             className="reveal"
           />

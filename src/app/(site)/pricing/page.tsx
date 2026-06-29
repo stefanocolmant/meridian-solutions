@@ -8,7 +8,7 @@ import { PRICING } from "@/content/data";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "License Compass, Quadrant or Polaris. Simple monthly access, application-gated.",
+  description: "License Delta Flow, Delta Vision or Scalprophecy. Simple monthly access, application-gated.",
 };
 
 export default function PricingPage() {
@@ -58,7 +58,7 @@ export default function PricingPage() {
 
       <Comparison />
       <FaqSection limit={5} />
-      <Cta title="Pick your tier." body="Apply for the licence that fits where you are today — you can upgrade to the full Polaris suite anytime." />
+      <Cta title="Pick your tier." body="Apply for the licence that fits where you are today — you can upgrade to the full Scalprophecy suite anytime." />
     </>
   );
 }

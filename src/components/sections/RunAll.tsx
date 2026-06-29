@@ -14,7 +14,7 @@ export function RunAll() {
         <div className="split-feature">
           <div data-reveal>
             <SectionHead
-              eyebrow="The Polaris advantage"
+              eyebrow="The Scalprophecy advantage"
               title="Run all nine. Smooth the curve."
               intro="A single setup has good days and bad days. Run the whole suite together and the peaks and troughs offset — the combined curve is calmer than any one configuration alone."
               className="reveal"

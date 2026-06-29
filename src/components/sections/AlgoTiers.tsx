@@ -12,7 +12,7 @@ export function AlgoTiers({
         {showHead && (
           <SectionHead
             eyebrow="The algorithms"
-            title="Three systems. One discipline."
+            title="Three access levels. One discipline."
             intro="Each tier widens session coverage and adds configurations. Start with the foundation, or run the complete suite together for the smoothest aggregate curve."
             className="reveal"
           />

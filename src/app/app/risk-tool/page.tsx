@@ -26,7 +26,7 @@ const CONFIGS: SizerConfig[] = [
   { name: "Asia Early", ddPerContract: 510, worstDay: 980, winRate: 59, profitFactor: 1.75 },
 ];
 
-type Tier = "Compass" | "Quadrant" | "Polaris";
+type Tier = "Delta Flow" | "Delta Vision" | "Scalprophecy";
 type AccountKind = "prop" | "personal";
 type Contract = "MNQ" | "NQ";
 
@@ -44,7 +44,7 @@ function Control({ label, hint, children }: { label: string; hint?: ReactNode; c
 }
 
 export default function RiskToolPage() {
-  const [tier, setTier] = useState<Tier>("Compass");
+  const [tier, setTier] = useState<Tier>("Delta Flow");
   const [accountKind, setAccountKind] = useState<AccountKind>("prop");
   const [contract, setContract] = useState<Contract>("MNQ");
   const [accountSize, setAccountSize] = useState<number>(50000);
@@ -122,9 +122,9 @@ export default function RiskToolPage() {
             >
               <Segmented<Tier>
                 options={[
-                  { value: "Compass", label: "Compass" },
-                  { value: "Quadrant", label: "Quadrant" },
-                  { value: "Polaris", label: "Polaris" },
+                  { value: "Delta Flow", label: "Delta Flow" },
+                  { value: "Delta Vision", label: "Delta Vision" },
+                  { value: "Scalprophecy", label: "Scalprophecy" },
                 ]}
                 value={tier}
                 onChange={setTier}

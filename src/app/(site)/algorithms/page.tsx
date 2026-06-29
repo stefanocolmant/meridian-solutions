@@ -9,7 +9,7 @@ import { ALGOS, ASSET } from "@/content/data";
 
 export const metadata: Metadata = {
   title: "Algorithms",
-  description: "Compass, Quadrant and Polaris — three validated NQ futures algorithms with nine configurations.",
+  description: "Delta Flow, Delta Vision and Scalprophecy — three validated NQ futures algorithms with nine configurations.",
 };
 
 export default function AlgorithmsPage() {
@@ -17,7 +17,7 @@ export default function AlgorithmsPage() {
     <>
       <PageHero
         eyebrow="The algorithms"
-        title="Compass. Quadrant. Polaris."
+        title="Delta Flow. Delta Vision. Scalprophecy."
         lead="Three validated systems, nine configurations, one discipline. Each tier widens session coverage — choose your starting point, then grow into the full suite."
         bg="/bg/nebula-2.webp"
       />
@@ -90,7 +90,7 @@ export default function AlgorithmsPage() {
 
       <RunAll />
       <RiskMechanisms />
-      <Cta title="Find your starting line." body="Apply to license Compass, Quadrant, or the complete Polaris suite. Every application is reviewed by hand." />
+      <Cta title="Find your starting line." body="Apply to license Delta Flow, Delta Vision, or the complete Scalprophecy suite. Every application is reviewed by hand." />
     </>
   );
 }

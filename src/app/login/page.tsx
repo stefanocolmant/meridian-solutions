@@ -35,7 +35,7 @@ export default function LoginPage() {
 
   function fillDemo() {
     setEmail("demo@meridiansolutions.co");
-    setPassword("Polaris-2026");
+    setPassword("Scalprophecy-2026");
   }
 
   return (
@@ -71,7 +71,7 @@ export default function LoginPage() {
         </form>
 
         <div className="p-auth-demo">
-          <b>Demo access</b> — <span className="mono">demo@meridiansolutions.co</span> / <span className="mono">Polaris-2026</span>
+          <b>Demo access</b> — <span className="mono">demo@meridiansolutions.co</span> / <span className="mono">Scalprophecy-2026</span>
           <button type="button" onClick={fillDemo} className="p-copy" style={{ marginTop: "0.6rem" }}>
             Fill demo credentials
           </button>

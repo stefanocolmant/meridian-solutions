@@ -35,19 +35,19 @@ export const ME = {
   name: "Jordan Reyes",
   firstName: "Jordan",
   email: "demo@meridiansolutions.co",
-  tier: "polaris" as const,
-  tierLabel: "Polaris",
+  tier: "scalprophecy" as const,
+  tierLabel: "Scalprophecy",
   initials: "JR",
   memberSince: "January 2025",
   tvUsername: "jreyes_nq",
   automationPlatform: "TradersPost",
-  assignedAlgorithm: "Polaris — All Nine",
+  assignedAlgorithm: "Scalprophecy — All Nine",
   forwardingUrl: "https://hook.meridiansolutions.co/u/9f2a7c41",
   webhookUrl: "https://hook.meridiansolutions.co/tv",
   timezone: "America/New_York",
 };
 
-export const TIER_CONFIGS: Record<string, number> = { compass: 4, quadrant: 7, polaris: 9 };
+export const TIER_CONFIGS: Record<string, number> = { deltaflow: 4, deltavision: 7, scalprophecy: 9 };
 
 /* ------------------------------- accounts -------------------------------- */
 export interface Account {
@@ -255,7 +255,7 @@ export const SIGNALS: Signal[] = (() => {
       action: actions[Math.floor(rng() * actions.length)],
       timeframe: tfs[Math.floor(rng() * tfs.length)],
       price: +(19800 + rng() * 700).toFixed(2),
-      tier: rng() > 0.5 ? "Polaris" : "Quadrant",
+      tier: rng() > 0.5 ? "Scalprophecy" : "Delta Vision",
       ago: agos[i],
       status: fail ? "Failed" : "Forwarded",
       latencyMs: latency,
@@ -278,8 +278,8 @@ export const SIGNAL_SUMMARY = {
 };
 
 export const STRATEGY_ACTIVITY = [
-  { name: "Quadrant — MT execution", count: 9, total: 23, tone: "quadrant" },
-  { name: "Polaris — Tradovate", count: 14, total: 23, tone: "polaris" },
+  { name: "Delta Vision — MT execution", count: 9, total: 23, tone: "deltavision" },
+  { name: "Scalprophecy — Tradovate", count: 14, total: 23, tone: "scalprophecy" },
 ];
 
 /* ------------------------------ performance ------------------------------ */
@@ -462,7 +462,7 @@ export interface TrainingModule { n: number; title: string; videos: { title: str
 export const TRAINING: TrainingModule[] = [
   { n: 1, title: "Orientation", locked: false, videos: [
     { title: "Welcome to Meridian", description: "How the system works end to end.", done: true },
-    { title: "The three algorithms", description: "Compass, Quadrant, Polaris explained.", done: true },
+    { title: "The three algorithms", description: "Delta Flow, Delta Vision, Scalprophecy explained.", done: true },
     { title: "Reading a signal", description: "Anatomy of an entry/stop/target.", done: true },
   ] },
   { n: 2, title: "Platform setup", locked: false, videos: [
@@ -494,9 +494,9 @@ export const QUICK_LINKS: QuickLink[] = [
 /* ----------------------------- activity feed ----------------------------- */
 export interface Activity { kind: "signal" | "trade" | "payout" | "system"; title: string; meta: string; ago: string; tone: "pos" | "neg" | "flat"; }
 export const ACTIVITY: Activity[] = [
-  { kind: "signal", title: "Polaris · NQ Long entry", meta: "5m · forwarded", ago: "3m", tone: "flat" },
+  { kind: "signal", title: "Scalprophecy · NQ Long entry", meta: "5m · forwarded", ago: "3m", tone: "flat" },
   { kind: "trade", title: "NQ Long closed", meta: "+$1,840 · Apex 150K", ago: "21m", tone: "pos" },
-  { kind: "signal", title: "Quadrant · MNQ Short target", meta: "2m · forwarded", ago: "44m", tone: "flat" },
+  { kind: "signal", title: "Delta Vision · MNQ Short target", meta: "2m · forwarded", ago: "44m", tone: "flat" },
   { kind: "trade", title: "ES Short closed", meta: "−$420 · Topstep 100K", ago: "1h", tone: "neg" },
   { kind: "payout", title: "Payout approved", meta: "$2,500 · MyFundedFutures", ago: "2h", tone: "pos" },
   { kind: "system", title: "All accounts synced", meta: "4 of 4 healthy", ago: "2h", tone: "flat" },
@@ -505,6 +505,6 @@ export const ACTIVITY: Activity[] = [
 /* ----------------------------- announcements ----------------------------- */
 export interface Announcement { id: string; severity: "info" | "warning" | "critical"; title: string; body: string; date: string; }
 export const ANNOUNCEMENTS: Announcement[] = [
-  { id: "an1", severity: "info", title: "New Overnight 2m config live for Polaris", body: "Polaris members now have access to the Overnight 2m configuration. Update your master chart to pull it in.", date: "Jun 24, 2026" },
+  { id: "an1", severity: "info", title: "New Overnight 2m config live for Scalprophecy", body: "Scalprophecy members now have access to the Overnight 2m configuration. Update your master chart to pull it in.", date: "Jun 24, 2026" },
   { id: "an2", severity: "warning", title: "CME holiday schedule — July 4", body: "Markets close early on July 3 and are shut July 4. Session configs will not fire during the closure.", date: "Jun 22, 2026" },
 ];

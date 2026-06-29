@@ -12,8 +12,8 @@ type Step =
 const STEPS: Step[] = [
   {
     kind: "text",
-    q: "Let's start with your name.",
-    hint: "Applications are reviewed by a human, not a funnel.",
+    q: "Start your application.",
+    hint: "Every application is personally reviewed by the Meridian team.",
     fields: [
       { name: "firstName", label: "First name", placeholder: "Jordan", half: true },
       { name: "lastName", label: "Last name", placeholder: "Reyes", half: true },
