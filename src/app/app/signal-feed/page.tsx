@@ -7,7 +7,7 @@ import { Segmented } from "@/portal/ui-client";
 import { num } from "@/portal/format";
 import { SIGNALS, SIGNAL_SUMMARY, STRATEGY_ACTIVITY, type Signal, type ForwardLog } from "@/portal/data";
 
-type TierFilter = "All" | "Vega" | "Polaris";
+type TierFilter = "All" | "Quadrant" | "Polaris";
 
 export default function SignalFeedPage() {
   const [filter, setFilter] = useState<TierFilter>("All");
@@ -99,7 +99,7 @@ export default function SignalFeedPage() {
             onChange={setFilter}
             options={[
               { value: "All", label: "All" },
-              { value: "Vega", label: "Vega" },
+              { value: "Quadrant", label: "Quadrant" },
               { value: "Polaris", label: "Polaris" },
             ]}
           />

@@ -33,7 +33,7 @@ const COMPLIANCE_RULES: string[] = [
   "Disclose any compensation, discount, or incentive given for the testimonial.",
 ];
 
-const TIERS = ["Compass", "Vega", "Polaris"] as const;
+const TIERS = ["Compass", "Quadrant", "Polaris"] as const;
 
 const selectStyle: CSSProperties = {
   background: "rgba(0,0,0,0.25)",

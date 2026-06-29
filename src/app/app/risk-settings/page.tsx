@@ -10,7 +10,7 @@ import { usd } from "@/portal/format";
 /* Per-configuration guardrails — two demo configs the member can cap locally. */
 const GUARDRAIL_CONFIGS: { key: string; label: string }[] = [
   { key: "compass", label: "Compass — Index Reversal" },
-  { key: "vega", label: "Vega — Momentum Burst" },
+  { key: "quadrant", label: "Quadrant — Momentum Burst" },
 ];
 
 export default function RiskSettingsPage() {
@@ -20,7 +20,7 @@ export default function RiskSettingsPage() {
   const [maxTrades, setMaxTrades] = useState<number>(6);
 
   // per-config guardrails
-  const [guardrails, setGuardrails] = useState<Record<string, number>>({ compass: 1200, vega: 900 });
+  const [guardrails, setGuardrails] = useState<Record<string, number>>({ compass: 1200, quadrant: 900 });
   const [warnPreOpen, setWarnPreOpen] = useState<boolean>(true);
   const [warnPostClose, setWarnPostClose] = useState<boolean>(false);
 

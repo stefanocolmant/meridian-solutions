@@ -57,9 +57,9 @@ const REPLIES: { match: string[]; answer: string }[] = [
       "Payouts are handled by your prop firm, not by Meridian — we never hold or custody capital. The portal's Payouts page mirrors your approved and pending withdrawals so you can track them in one place, but the request itself happens inside your firm's dashboard.",
   },
   {
-    match: ["tier", "compass", "vega", "upgrade", "polaris"],
+    match: ["tier", "compass", "quadrant", "upgrade", "polaris"],
     answer:
-      `Tiers map to how many algorithms you can run: Compass unlocks four, Vega seven, and ${ME.tierLabel} all nine. You're on ${ME.tierLabel}, so the full suite is available. Upgrades take effect on your next signal once the desk re-provisions your chart template.`,
+      `Tiers map to how many algorithms you can run: Compass unlocks four, Quadrant seven, and ${ME.tierLabel} all nine. You're on ${ME.tierLabel}, so the full suite is available. Upgrades take effect on your next signal once the desk re-provisions your chart template.`,
   },
   {
     match: ["session", "hours", "time", "restrict"],

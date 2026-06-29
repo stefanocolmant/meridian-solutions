@@ -26,7 +26,7 @@ const CONFIGS: SizerConfig[] = [
   { name: "Asia Early", ddPerContract: 510, worstDay: 980, winRate: 59, profitFactor: 1.75 },
 ];
 
-type Tier = "Compass" | "Vega" | "Polaris";
+type Tier = "Compass" | "Quadrant" | "Polaris";
 type AccountKind = "prop" | "personal";
 type Contract = "MNQ" | "NQ";
 
@@ -123,7 +123,7 @@ export default function RiskToolPage() {
               <Segmented<Tier>
                 options={[
                   { value: "Compass", label: "Compass" },
-                  { value: "Vega", label: "Vega" },
+                  { value: "Quadrant", label: "Quadrant" },
                   { value: "Polaris", label: "Polaris" },
                 ]}
                 value={tier}

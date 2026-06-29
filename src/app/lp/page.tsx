@@ -14,7 +14,7 @@ import { ProofGallery } from "./ProofGallery";
 export const metadata: Metadata = {
   title: "Apply for access — validated futures algorithms",
   description:
-    "Compass, Vega and Polaris — three validated NQ futures algorithms. Every signal ships with entry, stop and target. Apply for access.",
+    "Compass, Quadrant and Polaris — three validated NQ futures algorithms. Every signal ships with entry, stop and target. Apply for access.",
 };
 
 const HOW = [
@@ -24,7 +24,7 @@ const HOW = [
 ];
 
 const VALUE = [
-  ["Three validated algorithms", " — Compass, Vega and Polaris, built and validated in-house."],
+  ["Three validated algorithms", " — Compass, Quadrant and Polaris, built and validated in-house."],
   ["Nine configurations", " — run them together for a smoother aggregate equity curve."],
   ["Entry, stop and target", " pre-defined on every single signal — you execute a plan, not a hunch."],
   ["Prop firm or personal", " — deploy anywhere, and you keep full control of the account."],
@@ -49,7 +49,7 @@ export default function LandingPage() {
             Your edge, executed. <span className="accent">Without the emotion.</span>
           </h1>
           <p className="lp-sub lp-rise lp-d3">
-            Three validated futures algorithms — Compass, Vega and Polaris. Every signal ships with{" "}
+            Three validated futures algorithms — Compass, Quadrant and Polaris. Every signal ships with{" "}
             <b>entry, stop and target</b> pre-defined.
           </p>
 

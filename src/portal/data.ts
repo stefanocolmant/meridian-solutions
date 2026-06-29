@@ -47,7 +47,7 @@ export const ME = {
   timezone: "America/New_York",
 };
 
-export const TIER_CONFIGS: Record<string, number> = { compass: 4, vega: 7, polaris: 9 };
+export const TIER_CONFIGS: Record<string, number> = { compass: 4, quadrant: 7, polaris: 9 };
 
 /* ------------------------------- accounts -------------------------------- */
 export interface Account {
@@ -255,7 +255,7 @@ export const SIGNALS: Signal[] = (() => {
       action: actions[Math.floor(rng() * actions.length)],
       timeframe: tfs[Math.floor(rng() * tfs.length)],
       price: +(19800 + rng() * 700).toFixed(2),
-      tier: rng() > 0.5 ? "Polaris" : "Vega",
+      tier: rng() > 0.5 ? "Polaris" : "Quadrant",
       ago: agos[i],
       status: fail ? "Failed" : "Forwarded",
       latencyMs: latency,
@@ -278,7 +278,7 @@ export const SIGNAL_SUMMARY = {
 };
 
 export const STRATEGY_ACTIVITY = [
-  { name: "Vega — MT execution", count: 9, total: 23, tone: "vega" },
+  { name: "Quadrant — MT execution", count: 9, total: 23, tone: "quadrant" },
   { name: "Polaris — Tradovate", count: 14, total: 23, tone: "polaris" },
 ];
 
@@ -462,7 +462,7 @@ export interface TrainingModule { n: number; title: string; videos: { title: str
 export const TRAINING: TrainingModule[] = [
   { n: 1, title: "Orientation", locked: false, videos: [
     { title: "Welcome to Meridian", description: "How the system works end to end.", done: true },
-    { title: "The three algorithms", description: "Compass, Vega, Polaris explained.", done: true },
+    { title: "The three algorithms", description: "Compass, Quadrant, Polaris explained.", done: true },
     { title: "Reading a signal", description: "Anatomy of an entry/stop/target.", done: true },
   ] },
   { n: 2, title: "Platform setup", locked: false, videos: [
@@ -496,7 +496,7 @@ export interface Activity { kind: "signal" | "trade" | "payout" | "system"; titl
 export const ACTIVITY: Activity[] = [
   { kind: "signal", title: "Polaris · NQ Long entry", meta: "5m · forwarded", ago: "3m", tone: "flat" },
   { kind: "trade", title: "NQ Long closed", meta: "+$1,840 · Apex 150K", ago: "21m", tone: "pos" },
-  { kind: "signal", title: "Vega · MNQ Short target", meta: "2m · forwarded", ago: "44m", tone: "flat" },
+  { kind: "signal", title: "Quadrant · MNQ Short target", meta: "2m · forwarded", ago: "44m", tone: "flat" },
   { kind: "trade", title: "ES Short closed", meta: "−$420 · Topstep 100K", ago: "1h", tone: "neg" },
   { kind: "payout", title: "Payout approved", meta: "$2,500 · MyFundedFutures", ago: "2h", tone: "pos" },
   { kind: "system", title: "All accounts synced", meta: "4 of 4 healthy", ago: "2h", tone: "flat" },

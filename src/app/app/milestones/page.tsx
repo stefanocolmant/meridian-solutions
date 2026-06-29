@@ -384,7 +384,7 @@ export default function MilestonesPage() {
             <div className="p-row" style={{ gap: "0.5rem", marginTop: "0.7rem" }}>
               <TierTag tier="Compass" />
               <span className="muted">→</span>
-              <TierTag tier="Vega" />
+              <TierTag tier="Quadrant" />
               <span className="muted">→</span>
               <TierTag tier="Polaris" />
             </div>
