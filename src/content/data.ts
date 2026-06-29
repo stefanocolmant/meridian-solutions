@@ -210,10 +210,18 @@ export const PERSONAS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "The discipline is the product. Every signal shows up with the stop already drawn — my only job is to execute the plan in front of me.",
-    name: "Licensed trader",
-    role: "Prop-firm deployment",
+      "I've been part of the Meridian community for quite some time. I was the one in the back of the class who paid attention but did not always apply himself. I'm grateful for their patience and for not giving up on me. After a very difficult period in my life, I reached out for help so I could focus and take care of my kids. The team personally took the time to help me set up my futures account and get Polaris running. As a result, I am live and blessed. Thank you, Meridian.",
+    name: "Alex Soto",
+    role: "Futures Trader",
   },
+  {
+    quote:
+      "I took $7,000 in withdrawals over the past three weeks from a personal account.",
+    name: "Verified member",
+    role: "Personal-Account Trader",
+  },
+  /* PLACEHOLDER — DO NOT PUBLISH. Temporary cards retained during development;
+     replace with approved, compliance-reviewed testimonials before launch. */
   {
     quote:
       "It removed the part of trading I kept getting wrong: me. Entry, stop, and target are set before I ever see the trade.",
@@ -231,12 +239,6 @@ export const TESTIMONIALS = [
       "I run the same validated system on my own account. Full transparency, full control, nothing held by anyone but me.",
     name: "S. Marés",
     role: "Personal-capital trader",
-  },
-  {
-    quote:
-      "Running all nine configurations together is the difference. The aggregate curve is calmer than any single setup on its own.",
-    name: "Systematic futures trader",
-    role: "Funded account",
   },
 ];
 
@@ -333,8 +335,8 @@ export const PRICING = [
 /* ----------------------------------- faq --------------------------------- */
 export const FAQ = [
   {
-    q: "What is Meridian Solutions?",
-    a: "Meridian licenses three validated futures algorithms — Compass, Quadrant, and Polaris — directly to traders. Each signal arrives with a defined entry, stop, and target, so you execute a documented plan instead of trading on instinct. We provide software and education; we are not a broker or a money manager.",
+    q: "What is Meridian Trading Solutions?",
+    a: "Meridian Trading Solutions licenses institutional-grade automated futures trading technology directly to traders. Compass, Quadrant, and Polaris are three levels of access and service built on the same underlying system. Qualified trades are automatically routed and executed through supported client-controlled accounts according to predefined entries, stops, targets, and risk settings. Meridian provides software, setup assistance, and education; it does not custody customer funds, manage brokerage accounts, or take discretionary control of trading.",
   },
   {
     q: "How does it actually work?",
@@ -353,7 +355,7 @@ export const FAQ = [
     a: "All performance on this site is hypothetical and based on validated simulation, not a live account — it carries the inherent limitations of any modeled result. There are no guarantees. Trading futures involves substantial risk of loss, and your results will differ. We'd rather under-promise here than sell you a fantasy.",
   },
   {
-    q: "What markets and instrument do the algorithms trade?",
+    q: "What markets and instruments do the algorithms trade?",
     a: "The current system is built and validated on NQ E-mini futures (CME) across a 15-month window, tuned in-sample and confirmed out-of-sample with commission and slippage included.",
   },
   {
@@ -387,5 +389,7 @@ export const DISCLOSURES = {
   hypothetical:
     "Results presented on this site are hypothetical and based on validated simulation, not a live trading account. Hypothetical performance has inherent limitations: the trades were not actually executed, results are prepared with the benefit of hindsight, and no representation is made that any account will, or is likely to, achieve profits or losses similar to those shown.",
   risk:
-    "Trading futures and leveraged products involves substantial risk of loss and is not suitable for everyone. Past performance is not indicative of future results. Meridian Solutions provides software and education only — it is not a broker, financial advisor, or account-management service, and nothing here is financial or trading advice.",
+    "Trading futures and leveraged products involves substantial risk of loss and is not suitable for everyone. Past performance is not indicative of future results. Meridian Trading Solutions provides software and education only — it is not a broker, financial advisor, or account-management service, and nothing here is financial or trading advice.",
+  testimonial:
+    "Testimonials reflect individual experiences and are not representative of all clients. Trading results vary, and no result is guaranteed.",
 };

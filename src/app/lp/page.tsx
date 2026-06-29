@@ -209,6 +209,9 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+          <p className="mono muted" style={{ textAlign: "center", fontSize: "0.66rem", maxWidth: "60ch", margin: "1.6rem auto 0", letterSpacing: "0.02em" }}>
+            {DISCLOSURES.testimonial}
+          </p>
         </div>
       </section>
 

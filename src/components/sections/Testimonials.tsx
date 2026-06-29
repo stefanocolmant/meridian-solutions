@@ -1,4 +1,4 @@
-import { TESTIMONIALS } from "@/content/data";
+import { TESTIMONIALS, DISCLOSURES } from "@/content/data";
 import { SectionHead } from "@/components/ui";
 
 export function Testimonials({ cream = true }: { cream?: boolean }) {
@@ -44,6 +44,12 @@ export function Testimonials({ cream = true }: { cream?: boolean }) {
             </figure>
           ))}
         </div>
+      </div>
+
+      <div className="container" style={{ marginTop: "clamp(1.6rem,3vw,2.5rem)" }}>
+        <p className="mono muted" style={{ fontSize: "0.7rem", maxWidth: "72ch", letterSpacing: "0.02em" }}>
+          {DISCLOSURES.testimonial}
+        </p>
       </div>
     </section>
   );

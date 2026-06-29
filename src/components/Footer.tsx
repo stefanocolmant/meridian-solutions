@@ -12,11 +12,11 @@ export function Footer() {
       <div className="container mer-footer__cta" data-reveal>
         <p className="eyebrow reveal"><span className="dot" /> This isn&apos;t for everyone</p>
         <h2 className="display d-lg balance" data-split>
-          It might be for you.
+          A more structured way to trade may fit you.
         </h2>
-        <p className="lead muted reveal pretty" style={{ maxWidth: "44ch", margin: "0 auto" }}>
-          Access is application-based and reviewed by hand. Not a sales process — a
-          qualification one.
+        <p className="lead muted reveal pretty" style={{ maxWidth: "50ch", margin: "0 auto" }}>
+          Access is application-based so we can confirm platform compatibility, product fit, and
+          onboarding requirements before activation.
         </p>
         <div className="reveal" style={{ display: "flex", gap: "0.9rem", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href={NAV_CTA.href} className="btn btn--solid btn--lg">{NAV_CTA.label}</Link>
@@ -43,7 +43,7 @@ export function Footer() {
         <div className="mer-footer__brand">
           <Logo size={28} />
           <p className="muted pretty" style={{ maxWidth: "32ch", marginTop: "1.1rem" }}>
-            Institutional algorithms, licensed to traders who execute the plan.
+            Institutional-grade automated trading technology, licensed to clients who retain control of their accounts.
           </p>
           <div className="mer-footer__est mono">
             <span>{BRAND.location}</span>
@@ -77,7 +77,7 @@ export function Footer() {
 
       <div className="container mer-footer__bottom">
         <p className="mono">© {year} {BRAND.name}. All rights reserved.</p>
-        <p className="mono muted">Futures trading involves substantial risk. Hypothetical results — not investment advice.</p>
+        <p className="mono muted" style={{ maxWidth: "90ch" }}>Futures trading involves substantial risk and is not suitable for every trader. Hypothetical and past results have inherent limitations and do not guarantee future performance. Meridian provides trading technology and education, does not custody client funds, and does not exercise discretionary control over client accounts.</p>
       </div>
     </footer>
   );

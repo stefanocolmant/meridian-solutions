@@ -2,7 +2,7 @@
 // Change BRAND in one place to re-skin the whole site.
 
 export const BRAND = {
-  name: "Meridian Solutions",
+  name: "Meridian Trading Solutions",
   short: "Meridian",
   domain: "meridiansolutions.co",
   tagline: "Institutional algorithms, licensed to you.",
