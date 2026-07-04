@@ -1,11 +1,11 @@
 const SIGNALS: { t: string; r: string; neg?: boolean }[] = [
   { t: "NQ · LONG · NY OPEN", r: "+1.8R" },
-  { t: "NQ · SHORT · LONDON", r: "+1.2R" },
+  { t: "ES · SHORT · LONDON", r: "+1.2R" },
   { t: "NQ · LONG · OVERNIGHT", r: "−1.0R", neg: true },
   { t: "NQ · LONG · NY CLOSE", r: "+2.4R" },
-  { t: "NQ · SHORT · ASIA EARLY", r: "+0.9R" },
+  { t: "GC · SHORT · ASIA EARLY", r: "+0.9R" },
   { t: "NQ · LONG · MORNING OVERLAP", r: "+1.5R" },
-  { t: "NQ · SHORT · 5-MINUTE", r: "−1.0R", neg: true },
+  { t: "CL · SHORT · 5-MINUTE", r: "−1.0R", neg: true },
   { t: "NQ · LONG · NY OPEN", r: "+3.1R" },
 ];
 

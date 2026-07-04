@@ -1,5 +1,6 @@
 import { Counter } from "@/components/Counter";
 import { SectionHead } from "@/components/ui";
+import { MonthlyReturns } from "@/components/sections/MonthlyReturns";
 
 const STATS = [
   { node: <Counter value={1.846} decimals={3} />, label: "Profit factor", note: "Scalprophecy · 15-month validation" },
@@ -29,6 +30,8 @@ export function StatsBand({ head = true }: { head?: boolean }) {
             </div>
           ))}
         </div>
+
+        <MonthlyReturns />
       </div>
     </section>
   );

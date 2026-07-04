@@ -11,9 +11,9 @@ export function AlgoTiers({
       <div className="container">
         {showHead && (
           <SectionHead
-            eyebrow="The algorithms"
+            eyebrow="One system, three tiers"
             title="Three access levels. One discipline."
-            intro="Each tier widens session coverage and adds configurations. Start with the foundation, or run the complete suite together for the smoothest aggregate curve."
+            intro="It's one validated engine — each tier simply unlocks more of it: wider session coverage, more configurations, and deeper settings, support and customization access. Start with the foundation, or run the complete suite together for the smoothest aggregate curve."
             className="reveal"
           />
         )}

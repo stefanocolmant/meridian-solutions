@@ -120,10 +120,10 @@ export const VALIDATION = [
 
 /* ----------------------------- value pillars ----------------------------- */
 export const PILLARS = [
-  { stat: "3", label: "Validated algorithms", sub: "Delta Flow · Delta Vision · Scalprophecy" },
-  { stat: "9", label: "Total configurations", sub: "Run them together or à la carte" },
+  { stat: "1", label: "Validated system", sub: "One engine behind every signal" },
+  { stat: "9", label: "Configurations", sub: "Risk-parameter presets across sessions & timeframes" },
+  { stat: "3", label: "Access levels", sub: "Delta Flow · Delta Vision · Scalprophecy" },
   { stat: "100%", label: "Account control", sub: "We never hold or touch your capital" },
-  { stat: "4", label: "Risk mechanisms", sub: "Built into every signal" },
 ];
 
 /* --------------------------- the meridian process ------------------------ */
@@ -184,27 +184,27 @@ export const AUDIENCE = [
 export const PERSONAS = [
   {
     name: "Prop-firm traders",
-    body: "Pass evaluations and run funded accounts on a rules-based system. Consistent execution, defined risk, zero improvisation.",
+    body: "Pass evaluations and run funded accounts on autopilot. Signals fire automatically with defined risk — consistent execution, zero improvisation, no screen-watching.",
   },
   {
     name: "Personal capital",
-    body: "Run the same validated algorithms on your own brokerage account — full control, full transparency, nothing held by us.",
+    body: "Run the same automated system on your own brokerage account — hands-off compounding, full transparency, and nothing ever held by us.",
   },
   {
     name: "Futures traders",
-    body: "Session-aware configurations built around the NY, London and Asia windows, executing to validated parameters.",
+    body: "Session-aware configurations spanning the NY, London and Asia windows — specialized on NQ and adaptable to other liquid markets, all firing automatically to your platform.",
   },
   {
     name: "Systematic traders",
-    body: "A documented, validated edge with four independent risk mechanisms — deploy it exactly as it was tested.",
+    body: "A documented, validated edge with four independent risk mechanisms — deployed exactly as it was tested and executed automatically, with no manual intervention.",
   },
   {
     name: "Discretionary traders",
-    body: "Replace gut calls with rules. Every entry, stop and target is pre-calculated before the signal ever reaches you.",
+    body: "Trade hands-off instead of on impulse. Every entry, stop and target is pre-calculated and routed for you before emotion ever gets a vote.",
   },
   {
     name: "Funded accounts",
-    body: "Protect the account that matters. Bounded risk on every signal keeps firm drawdown limits comfortably in reach.",
+    body: "Protect the account that matters. Bounded risk on every automated signal keeps firm drawdown limits comfortably in reach while the system compounds.",
   },
 ];
 
@@ -366,7 +366,7 @@ export const FAQ = [
   },
   {
     q: "How does it actually work?",
-    a: "After a short application and an onboarding call, we install the chart templates and webhooks on your platform and dial in your risk. From there the algorithms generate signals automatically — you (or an optional hands-free setup) simply execute them on your prop-firm or personal account.",
+    a: "After a short application and an onboarding call, we install the chart templates and webhooks on your platform and dial in your risk. From there the system generates and routes every signal automatically to your prop-firm or personal account — hands-off by default, with a fully manual option if you'd rather fire each ticket yourself.",
   },
   {
     q: "Can I use this at a prop firm and on my own broker?",
@@ -382,7 +382,7 @@ export const FAQ = [
   },
   {
     q: "What markets and instruments do the algorithms trade?",
-    a: "The current system is built and validated on NQ E-mini futures (CME) across a 15-month window, tuned in-sample and confirmed out-of-sample with commission and slippage included.",
+    a: "The system specializes in NQ E-mini futures (CME) — that's where it was validated across a 15-month window, tuned in-sample and confirmed out-of-sample with commission and slippage included. The same engine and parameters extend to other liquid futures, so you're not locked to a single market as your account and goals grow.",
   },
   {
     q: "Which platforms are supported?",
@@ -390,7 +390,7 @@ export const FAQ = [
   },
   {
     q: "How much capital and time do I need?",
-    a: "A prop-firm evaluation can be started for a fraction of the buying power it unlocks. On a personal account, sizing is your choice. Day to day, most members spend roughly ten minutes managing the system — or opt into a hands-free configuration.",
+    a: "A prop-firm evaluation can be started for a fraction of the buying power it unlocks. On a personal account, sizing is your choice. Day to day the system runs hands-off; most members spend only a few minutes checking in, or leave it fully automated.",
   },
   {
     q: "Do you ever touch my money?",

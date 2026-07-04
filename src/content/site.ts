@@ -5,9 +5,9 @@ export const BRAND = {
   name: "Meridian Trading Solutions",
   short: "Meridian",
   domain: "meridiansolutions.co",
-  tagline: "Institutional algorithms, licensed to you.",
+  tagline: "Institutional grade algorithms, licensed to you.",
   description:
-    "Three validated futures algorithms — every signal delivered with entry, stop, and target pre-defined. Deploy at your prop firm or on your own capital. You keep full control of the account.",
+    "One validated futures system with nine configurations — every signal delivered with entry, stop, and target pre-defined and routed automatically to your account. Deploy at your prop firm or on your own capital. You keep full control of the account.",
   est: "EST. 2026",
   location: "New York · Remote",
   email: {

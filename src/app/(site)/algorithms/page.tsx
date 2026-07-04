@@ -9,7 +9,7 @@ import { ALGOS, ASSET } from "@/content/data";
 
 export const metadata: Metadata = {
   title: "Algorithms",
-  description: "Delta Flow, Delta Vision and Scalprophecy — three validated NQ futures algorithms with nine configurations.",
+  description: "One validated futures system — nine configurations across three access levels (Delta Flow, Delta Vision, Scalprophecy), specialized on NQ and adaptable to other liquid markets.",
 };
 
 export default function AlgorithmsPage() {
@@ -18,7 +18,7 @@ export default function AlgorithmsPage() {
       <PageHero
         eyebrow="The algorithms"
         title="Delta Flow. Delta Vision. Scalprophecy."
-        lead="Three validated systems, nine configurations, one discipline. Each tier widens session coverage — choose your starting point, then grow into the full suite."
+        lead="One validated engine, nine configurations, three access levels — one discipline. Each tier widens session coverage — choose your starting point, then grow into the full suite."
         bg="/bg/nebula-2.webp"
       />
 
@@ -37,7 +37,7 @@ export default function AlgorithmsPage() {
             <table className="ctable">
               <thead>
                 <tr>
-                  <th>System</th>
+                  <th>Access level</th>
                   <th>Tier</th>
                   <th>Configurations</th>
                   <th>Net P&amp;L · 15mo</th>
@@ -67,7 +67,7 @@ export default function AlgorithmsPage() {
       {/* coverage detail */}
       <section className="section">
         <div className="container">
-          <SectionHead eyebrow="Session coverage" title="Where each system trades." className="reveal" />
+          <SectionHead eyebrow="Session coverage" title="Where each tier trades." className="reveal" />
           <div className="grid-3" style={{ marginTop: "clamp(2rem,4vw,3rem)" }} data-cards>
             {ALGOS.map((a) => (
               <div className="card" key={a.key} style={{ padding: "clamp(1.4rem,2.4vw,2rem)", display: "flex", flexDirection: "column", gap: "1.1rem" }}>

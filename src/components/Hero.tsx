@@ -10,11 +10,11 @@ type Chip = { v: string; k: string };
  * frosted-glass stat chips.
  */
 export function Hero({
-  eyebrow = "Meridian Solutions · NQ Futures",
+  eyebrow = "Meridian Solutions · Automated Futures",
   sideLeft = "Remove the guesswork",
-  sideRight = "Execute the plan",
-  title = "Institutional algorithms, licensed to you.",
-  lead = "Three validated NQ futures algorithms you run yourself — every signal arrives with the entry, stop and target already set. Deploy at your prop firm or on your own capital. You hold the account, always.",
+  sideRight = "Compound on autopilot",
+  title = "Institutional grade algorithms, licensed to you.",
+  lead = "Gain access to one fully validated futures system with nine configurations — distinct risk-parameter presets built across different sessions and market conditions, specialized on NQ and adaptable to other liquid markets. Every setup ships with entry, stop and target already defined and routes automatically to your account, so you compound with structure, consistency and complete control.",
   cta = { label: "Apply for access", href: "/apply" },
   secondary = { label: "See the performance", href: "/performance" },
   chips = [

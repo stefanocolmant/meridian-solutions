@@ -12,8 +12,8 @@ export function Personas({ cream = false }: { cream?: boolean }) {
       <div className="container">
         <SectionHead
           eyebrow="Who it's for"
-          title="Built for traders who execute."
-          intro="One validated system, deployed however you trade. Hover a profile to see how Meridian fits."
+          title="Built for hands-off compounding."
+          intro="One validated system that runs itself — signals fire automatically to your account, so you compound without babysitting charts. Hover a profile to see how Meridian fits."
           className="reveal"
         />
 

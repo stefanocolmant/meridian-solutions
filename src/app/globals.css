@@ -1232,3 +1232,41 @@ input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18p
 
 .lp-tcards--4 { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 800px) { .lp-tcards--4 { grid-template-columns: 1fr; } }
+
+/* ===== Home revisions: step kicker · monthly-returns chart · rotating quote ===== */
+
+/* Process — explicit "Step 0X" kicker so the journey reads as numbered steps */
+.proc__kicker { display: inline-block; font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--signal); margin-bottom: 0.55rem; }
+
+/* Monthly returns bar chart (inside "The numbers" section) */
+.mreturns { margin-top: clamp(2.5rem,5vw,4rem); border-top: 1px solid var(--line); padding-top: clamp(1.6rem,3vw,2.4rem); }
+.mreturns__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.2rem; margin-bottom: clamp(1.4rem,3vw,2.2rem); }
+.mreturns__note { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.mreturns__scroll { overflow-x: auto; overflow-y: visible; scrollbar-width: none; padding: 1.5rem 0 0.3rem; }
+.mreturns__scroll::-webkit-scrollbar { display: none; }
+.mreturns__plot { position: relative; height: clamp(180px,26vw,260px); min-width: 560px; }
+.mreturns__baseline { position: absolute; left: 0; right: 0; height: 1px; background: var(--line-strong); z-index: 0; }
+.mreturns__bars { position: absolute; inset: 0; display: flex; align-items: stretch; gap: clamp(4px,0.9vw,12px); }
+.mreturns__col { position: relative; flex: 1 1 0; height: 100%; }
+.mreturns__bar { position: absolute; left: 12%; right: 12%; transform: scaleY(0); transition: transform 0.85s cubic-bezier(0.2,0.7,0.2,1) var(--d,0ms), filter 0.2s; }
+.mreturns__col.is-up .mreturns__bar { bottom: var(--zero); height: var(--h); transform-origin: bottom; border-radius: 3px 3px 0 0; background: linear-gradient(to top, color-mix(in srgb, var(--color-up) 45%, transparent), var(--color-up)); }
+.mreturns__col.is-down .mreturns__bar { top: calc(100% - var(--zero)); height: var(--h); transform-origin: top; border-radius: 0 0 3px 3px; background: linear-gradient(to bottom, color-mix(in srgb, var(--signal-soft) 45%, transparent), var(--signal-soft)); }
+.mreturns[data-in] .mreturns__bar { transform: scaleY(1); }
+.mreturns__col:hover .mreturns__bar { filter: brightness(1.15); }
+.mreturns__val { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 0.6rem; line-height: 1; letter-spacing: 0.02em; color: var(--fg); opacity: 0; transition: opacity 0.18s; pointer-events: none; z-index: 2; }
+.mreturns__col.is-up .mreturns__val { bottom: calc(var(--zero) + var(--h) + 0.35rem); }
+.mreturns__col.is-down .mreturns__val { bottom: calc(var(--zero) + 0.35rem); color: var(--signal-soft); }
+.mreturns__col:hover .mreturns__val { opacity: 1; }
+.mreturns__axis { display: flex; gap: clamp(4px,0.9vw,12px); min-width: 560px; margin-top: 0.7rem; }
+.mreturns__m { flex: 1 1 0; text-align: center; font-size: 0.56rem; letter-spacing: 0.03em; color: var(--muted); white-space: nowrap; }
+
+/* Rotating testimonial headline */
+.tquote__q { animation: tq-fade 0.7s var(--ease-out-expo, ease) both; }
+.tquote__meta { display: flex; flex-direction: column; gap: 1.4rem; }
+.tquote__meta .tcard__by { animation: tq-fade 0.7s var(--ease-out-expo, ease) both; }
+.tquote__dots { display: flex; gap: 0.5rem; }
+.tquote__dot { width: 9px; height: 9px; border-radius: 999px; border: 1px solid var(--line-strong); background: transparent; padding: 0; cursor: pointer; transition: background 0.25s, border-color 0.25s, transform 0.25s; }
+.tquote__dot:hover { border-color: var(--signal); }
+.tquote__dot.is-on { background: var(--signal); border-color: var(--signal); transform: scale(1.15); }
+@keyframes tq-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .tquote__q, .tquote__meta .tcard__by { animation: none; } }

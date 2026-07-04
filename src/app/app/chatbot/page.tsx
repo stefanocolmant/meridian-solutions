@@ -44,7 +44,7 @@ const REPLIES: { match: string[]; answer: string }[] = [
   {
     match: ["prop", "firm", "scalprophecy", "topstep", "apex", "evaluation", "funded"],
     answer:
-      `On the ${ME.tierLabel} tier you can run all nine algorithms, so look for a firm with a generous trailing drawdown and no daily-loss lock — that lets the full strategy set breathe. Topstep, Apex and MyFundedFutures all accept webhook automation and pair well with Scalprophecy. Because one signal can route to several accounts at once, members often stack two or three evaluations rather than scaling a single account.`,
+      `On the ${ME.tierLabel} tier you can run all nine configurations, so look for a firm with a generous trailing drawdown and no daily-loss lock — that lets the full strategy set breathe. Topstep, Apex and MyFundedFutures all accept webhook automation and pair well with Scalprophecy. Because one signal can route to several accounts at once, members often stack two or three evaluations rather than scaling a single account.`,
   },
   {
     match: ["read", "signal", "entry", "stop", "target", "anatomy"],
@@ -59,7 +59,7 @@ const REPLIES: { match: string[]; answer: string }[] = [
   {
     match: ["tier", "deltaflow", "deltavision", "upgrade", "scalprophecy"],
     answer:
-      `Tiers map to how many algorithms you can run: Delta Flow unlocks four, Delta Vision seven, and ${ME.tierLabel} all nine. You're on ${ME.tierLabel}, so the full suite is available. Upgrades take effect on your next signal once the desk re-provisions your chart template.`,
+      `Tiers map to how many configurations you can run: Delta Flow unlocks four, Delta Vision seven, and ${ME.tierLabel} all nine. You're on ${ME.tierLabel}, so the full suite is available. Upgrades take effect on your next signal once the desk re-provisions your chart template.`,
   },
   {
     match: ["session", "hours", "time", "restrict"],

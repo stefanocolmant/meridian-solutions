@@ -462,7 +462,7 @@ export interface TrainingModule { n: number; title: string; videos: { title: str
 export const TRAINING: TrainingModule[] = [
   { n: 1, title: "Orientation", locked: false, videos: [
     { title: "Welcome to Meridian", description: "How the system works end to end.", done: true },
-    { title: "The three algorithms", description: "Delta Flow, Delta Vision, Scalprophecy explained.", done: true },
+    { title: "The three access levels", description: "Delta Flow, Delta Vision, Scalprophecy explained.", done: true },
     { title: "Reading a signal", description: "Anatomy of an entry/stop/target.", done: true },
   ] },
   { n: 2, title: "Platform setup", locked: false, videos: [

@@ -9,9 +9,9 @@ export function Process({ cream = false }: { cream?: boolean }) {
         <div className="proc">
           <div className="proc__aside">
             <SectionHead
-              eyebrow="The Meridian process"
+              eyebrow="Your step-by-step journey"
               title="From application to compounding."
-              intro="A clear, walked-through path — not a leap of faith. Most members run institutional capital first, then add a personal account once the engine pays for itself."
+              intro="Five clear steps from application to compounding. Most members run institutional capital first, then add a personal account once the engine pays for itself."
               size="d-md"
               className="reveal"
             />
@@ -25,6 +25,7 @@ export function Process({ cream = false }: { cream?: boolean }) {
               <div className="proc__step reveal" key={s.n}>
                 <div className="proc__n">{s.n}</div>
                 <div>
+                  <span className="proc__kicker mono">Step {s.n}</span>
                   <h3>{s.title}</h3>
                   <p>{s.body}</p>
                 </div>

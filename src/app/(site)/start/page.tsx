@@ -34,7 +34,7 @@ export default function StartPage() {
         sideLeft="The edge"
         sideRight="The access"
         title="The institutional edge, finally licensable."
-        lead="Three validated NQ futures algorithms, run by you, on your prop-firm or personal account. Every signal arrives with entry, stop and target already set. Here's the whole thing — proof, process, and how to get in."
+        lead="One validated futures system — nine configurations specialized on NQ and adaptable to other liquid markets — routed automatically to your prop-firm or personal account. Every signal arrives with entry, stop and target already set. Here's the whole thing — proof, process, and how to get in."
         cta={{ label: "Apply for access", href: "#apply" }}
         secondary={{ label: "See the proof first", href: "#proof" }}
       />
