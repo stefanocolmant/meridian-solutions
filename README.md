@@ -18,7 +18,7 @@ Run all nine configurations together for the smoothest aggregate equity curve.
 
 ## Pages
 
-`/` home · `/algorithms` · `/performance` (stats, calendar, equity curves, validation) · `/methodology` · `/process` · `/pricing` · `/calculator` (investment projector) · `/faq` · `/apply` (book a demo / opt-in) · `/login` · `/privacy` · `/terms`
+`/` home · `/algorithms` · `/performance` (stats, calendar, equity curves, validation) · `/methodology` · `/process` · `/pricing` · `/calculator` (investment projector) · `/faq` · `/apply` (book a demo / opt-in) · `/start` · `/lp` (landing page) · `/privacy` · `/terms`
 
 ## Develop
 

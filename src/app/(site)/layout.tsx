@@ -2,7 +2,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-/* Marketing chrome — only wraps the public site, not the portal or admin. */
+/* Marketing chrome for the public site. */
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <>

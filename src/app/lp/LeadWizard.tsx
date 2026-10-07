@@ -109,8 +109,8 @@ export function LeadWizard() {
             Every application is reviewed by hand. If it&apos;s a fit, we&apos;ll reach out from{" "}
             <span className="accent">access@meridiansolutions.co</span> to book your onboarding call.
           </p>
-          <Link href="/login" className="btn btn--solid btn--lg" style={{ marginTop: "0.4rem" }}>
-            See inside the platform <ArrowRight size={15} />
+          <Link href="/algorithms" className="btn btn--solid btn--lg" style={{ marginTop: "0.4rem" }}>
+            Explore the algorithms <ArrowRight size={15} />
           </Link>
           <p className="lp-reassure">Application-gated · No card required · You keep full account control</p>
         </div>

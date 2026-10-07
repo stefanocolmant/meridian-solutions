@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
-import { NAV, NAV_CTA, NAV_LOGIN, BRAND } from "@/content/site";
+import { NAV, NAV_CTA, BRAND } from "@/content/site";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -72,9 +72,6 @@ export function Nav() {
         </nav>
 
         <div className="mer-nav__actions">
-          <Link href={NAV_LOGIN.href} className="mer-nav__login">
-            {NAV_LOGIN.label}
-          </Link>
           <Link href={NAV_CTA.href} className="btn btn--solid">
             {NAV_CTA.label}
           </Link>
@@ -106,14 +103,6 @@ export function Nav() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href={NAV_LOGIN.href}
-            className="mer-drawer__link"
-            style={{ transitionDelay: `${0.06 * NAV.length + 0.1}s` }}
-          >
-            <span className="mer-drawer__num">{String(NAV.length + 1).padStart(2, "0")}</span>
-            {NAV_LOGIN.label}
-          </Link>
         </nav>
 
         <div className="mer-drawer__foot">

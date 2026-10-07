@@ -34,7 +34,6 @@ export const NAV: NavLink[] = [
 ];
 
 export const NAV_CTA = { label: "Apply for access", href: "/apply" };
-export const NAV_LOGIN = { label: "Client login", href: "/login" };
 
 export const FOOTER_COLS: { title: string; links: NavLink[] }[] = [
   {
@@ -54,7 +53,6 @@ export const FOOTER_COLS: { title: string; links: NavLink[] }[] = [
       { label: "Apply for access", href: "/apply" },
       { label: "Book a demo", href: "/apply" },
       { label: "Pricing", href: "/pricing" },
-      { label: "Client login", href: "/login" },
     ],
   },
   {
